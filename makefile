@@ -1,4 +1,4 @@
-mm5: asm6
+mm3: asm6
 
 asm6: 
 	$(MAKE) -C tools/
