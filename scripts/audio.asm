@@ -14,7 +14,7 @@ ENDM
 MACRO channel_2 a
 	IF channel_flags&2
 		dh a
-		dl b
+		dl a
 	ELSE
 		db 0, 0
 	ENDIF
@@ -69,7 +69,13 @@ MACRO note_sustain_length a
 ENDM
 
 MACRO volume a
-	db 7, a
+	IF a < 0
+		error "Invalid volume"
+	ELSEIF a > $f
+		error "Invalid volume"
+	ELSE
+		db 7, a
+	ENDIF
 ENDM
 
 MACRO instrument a
@@ -77,7 +83,13 @@ MACRO instrument a
 ENDM
 
 MACRO octave a
-	db 9, a
+	IF a < 0
+		error "Invalid octave"
+	ELSEIF a > 7
+		error "Invalid octave"
+	ELSE
+		db 9, a
+	ENDIF
 ENDM
 
 MACRO global_transpose a
