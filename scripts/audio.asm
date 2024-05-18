@@ -69,9 +69,7 @@ MACRO note_sustain_length a
 ENDM
 
 MACRO volume a
-	IF a < 0
-		error "Invalid volume"
-	ELSEIF a > $f
+	IF a < 0 || a > $f
 		error "Invalid volume"
 	ELSE
 		db 7, a
@@ -83,9 +81,7 @@ MACRO instrument a
 ENDM
 
 MACRO octave a
-	IF a < 0
-		error "Invalid octave"
-	ELSEIF a > 7
+	IF a < 0 || a > 7
 		error "Invalid octave"
 	ELSE
 		db 9, a
@@ -109,31 +105,47 @@ MACRO pitch_slide a
 ENDM
 
 MACRO loop1 a, b
-	db $e
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO loop2 a, b
-	db $f
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO loop3 a, b
-	db $10
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO loop4 a, b
-	db $11
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO break1 a, b
@@ -179,19 +191,19 @@ MACRO duty_cycle a
 ENDM
 
 MACRO rest a
-	IF a&1
+	IF a == 1
 		b = $20
-	ELSEIF a&2
+	ELSEIF a == 2
 		b = $40
-	ELSEIF a&4
+	ELSEIF a == 4
 		b = $60
-	ELSEIF a&8
+	ELSEIF a == 8
 		b = $80
-	ELSEIF a&16
+	ELSEIF a == 16
 		b = $a0
-	ELSEIF a&32
+	ELSEIF a == 32
 		b = $c0
-	ELSEIF a&64
+	ELSEIF a == 64
 		b = $e0
 	ELSE
 		error "Invalid note length"
@@ -305,52 +317,48 @@ ENDM
 	B_7 = $5f
 
 MACRO note a, b
-	IF a < current_base_note
-		error "Note is out of range"
-	ELSEIF a-current_base_note > $1e
+	IF a-current_base_note < 0 || a-current_base_note > $1e
 		error "Note is out of range"
 	ELSE
 		c = a-current_base_note
 	ENDIF
-	IF b&1
+	IF b == 1
 		d = $21
-	ELSEIF b&2
+	ELSEIF b == 2
 		d = $41
-	ELSEIF b&4
+	ELSEIF b == 4
 		d = $61
-	ELSEIF b&8
+	ELSEIF b == 8
 		d = $81
-	ELSEIF b&16
+	ELSEIF b == 16
 		d = $a1
-	ELSEIF b&32
+	ELSEIF b == 32
 		d = $c1
-	ELSEIF b&64
+	ELSEIF b == 64
 		d = $e1
 	ELSE
 		error "Invalid note length"
 	ENDIF
-		db c+d
+	db c+d
 ENDM
 
 MACRO noise_note a, b
-	IF a<1
-		error "Noise note is out of range"
-	ELSEIF a>$1e
+	IF a < 0 || a > $1e
 		error "Noise note is out of range"
 	ENDIF
-	IF b&1
+	IF b == 1
 		c = $21
-	ELSEIF b&2
+	ELSEIF b == 2
 		c = $41
-	ELSEIF b&4
+	ELSEIF b == 4
 		c = $61
-	ELSEIF b&8
+	ELSEIF b == 8
 		c = $81
-	ELSEIF b&16
+	ELSEIF b == 16
 		c = $a1
-	ELSEIF b&32
+	ELSEIF b == 32
 		c = $c1
-	ELSEIF b&64
+	ELSEIF b == 64
 		c = $e1
 	ELSE
 		error "Invalid note length"
