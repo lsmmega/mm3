@@ -179,19 +179,19 @@ MACRO duty_cycle a
 ENDM
 
 MACRO rest a
-	IF a&1
+	IF a == 1
 		b = $20
-	ELSEIF a&2
+	ELSEIF a == 2
 		b = $40
-	ELSEIF a&4
+	ELSEIF a == 4
 		b = $60
-	ELSEIF a&8
+	ELSEIF a == 8
 		b = $80
-	ELSEIF a&16
+	ELSEIF a == 16
 		b = $a0
-	ELSEIF a&32
+	ELSEIF a == 32
 		b = $c0
-	ELSEIF a&64
+	ELSEIF a == 64
 		b = $e0
 	ELSE
 		error "Invalid note length"
@@ -312,24 +312,24 @@ MACRO note a, b
 	ELSE
 		c = a-current_base_note
 	ENDIF
-	IF b&1
+	IF b == 1
 		d = $21
-	ELSEIF b&2
+	ELSEIF b == 2
 		d = $41
-	ELSEIF b&4
+	ELSEIF b == 4
 		d = $61
-	ELSEIF b&8
+	ELSEIF b == 8
 		d = $81
-	ELSEIF b&16
+	ELSEIF b == 16
 		d = $a1
-	ELSEIF b&32
+	ELSEIF b == 32
 		d = $c1
-	ELSEIF b&64
+	ELSEIF b == 64
 		d = $e1
 	ELSE
 		error "Invalid note length"
 	ENDIF
-		db c+d
+	db c+d
 ENDM
 
 MACRO noise_note a, b
@@ -338,19 +338,19 @@ MACRO noise_note a, b
 	ELSEIF a>$1e
 		error "Noise note is out of range"
 	ENDIF
-	IF b&1
+	IF b == 1
 		c = $21
-	ELSEIF b&2
+	ELSEIF b == 2
 		c = $41
-	ELSEIF b&4
+	ELSEIF b == 4
 		c = $61
-	ELSEIF b&8
+	ELSEIF b == 8
 		c = $81
-	ELSEIF b&16
+	ELSEIF b == 16
 		c = $a1
-	ELSEIF b&32
+	ELSEIF b == 32
 		c = $c1
-	ELSEIF b&64
+	ELSEIF b == 64
 		c = $e1
 	ELSE
 		error "Invalid note length"
