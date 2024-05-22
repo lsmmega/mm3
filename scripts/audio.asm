@@ -117,7 +117,7 @@ ENDM
 
 MACRO loop2 a, b
 	IF a
-		db $e
+		db $f
 		db a
 		dh b
 		dl b
@@ -128,7 +128,7 @@ ENDM
 
 MACRO loop3 a, b
 	IF a
-		db $e
+		db $10
 		db a
 		dh b
 		dl b
@@ -139,7 +139,7 @@ ENDM
 
 MACRO loop4 a, b
 	IF a
-		db $e
+		db $11
 		db a
 		dh b
 		dl b
