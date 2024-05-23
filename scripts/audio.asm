@@ -182,7 +182,7 @@ MACRO jump a
 	dl a
 ENDM
 
-MACRO music_channel_end
+MACRO channel_end
 	db $17
 ENDM
 
