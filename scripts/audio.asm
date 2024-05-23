@@ -2,42 +2,6 @@ MACRO music_pointers
 	db 0
 ENDM
 
-MACRO channel_1 a
-	IF channel_flags&1
-		dh a
-		dl a
-	ELSE
-		db 0, 0
-	ENDIF
-ENDM
-
-MACRO channel_2 a
-	IF channel_flags&2
-		dh a
-		dl a
-	ELSE
-		db 0, 0
-	ENDIF
-ENDM
-
-MACRO channel_3 a
-	IF channel_flags&4
-		dh a
-		dl a
-	ELSE
-		db 0, 0
-	ENDIF
-ENDM
-
-MACRO channel_4 a
-	IF channel_flags&8
-		dh a
-		dl a
-	ELSE
-		db 0, 0
-	ENDIF
-ENDM
-
 MACRO triplet_set
 	db 0
 ENDM
