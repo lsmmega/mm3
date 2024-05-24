@@ -1,4 +1,4 @@
 # Mega Man 3
- (WIP) Disassembly of Mega Man 3
- 
- Reserved
+(WIP) Disassembly of Mega Man 3
+
+Reserved
