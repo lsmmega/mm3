@@ -41,8 +41,8 @@
 	dl music_ending
 	dh music_stage_select
 	dl music_stage_select
-	dh music_proto_on_stage
-	dl music_proto_on_stage
+	dh music_proto_whistle_mm3
+	dl music_proto_whistle_mm3
 	dh music_proto_theme
 	dl music_proto_theme
 

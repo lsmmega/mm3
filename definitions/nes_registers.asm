@@ -1,5 +1,3 @@
-;mm3_ram_pre_definitions
-
 ;nes_registers
 	ppu_ctrl = $2000
 	ppu_mask = $2001
@@ -27,13 +25,3 @@
 	apu_status = $4015
 	apu_frame_counter = $4017 ;write
 	joy2_frame = $4017 ;read
-
-;mm3_mmc3_registers
-	bank_select = $8000
-	bank_data = $8001
-	mmc3_mirroring = $a000
-	prg_ram_protect = $a001
-	irq_latch = $c000
-	irq_reload = $c001
-	irq_disable = $e000
-	irq_enable = $e001
