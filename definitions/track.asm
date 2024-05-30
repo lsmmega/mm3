@@ -16,7 +16,7 @@
 	music_pass_word = #$0e
 	music_ending = #$0f
 	music_stage_select = #$10
-	music_proto_whistle_mm3 = #$11
+	music_proto_whistle = #$11
 	music_proto_theme = #$12
 	sfx_landing = #$13
 	sfx_1up = #$14
