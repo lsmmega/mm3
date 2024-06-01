@@ -87,8 +87,8 @@
 	dl sfx_bolton_and_nutton
 	dh sfx_elecn
 	dl sfx_elecn
-	dh sfx_destroy_big
-	dl sfx_destroy_big
+	dh sfx_explosion
+	dl sfx_explosion
 	dh sfx_ufo
 	dl sfx_ufo
 	dh sfx_unused29
