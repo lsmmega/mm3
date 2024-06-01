@@ -38,7 +38,7 @@
 	sfx_nitron = #$24
 	sfx_bolton_and_nutton = #$25
 	sfx_elecn = #$26
-	sfx_destroy_big = #$27
+	sfx_explosion = #$27
 	sfx_ufo = #$28
 	;sfx_unused29 = #$29
 	sfx_magnet = #$2a
