@@ -277,8 +277,8 @@ ENDM
 	G_7 = $5b
 	G#7 = $5c
 	A_7 = $5d
-	A#7 = $5e
-	B_7 = $5f
+	A_7_ = $5e
+	A#7 = $5f
 
 MACRO note a, b
 	IF a-current_base_note < 0 || a-current_base_note > $1e
@@ -328,4 +328,326 @@ MACRO noise_note a, b
 		error "Invalid note length"
 	ENDIF
 	db a+c
+ENDM
+
+MACRO sfx_priority a
+	db a
+ENDM
+
+MACRO sfx_global_flags a
+	db a
+ENDM
+
+MACRO sfx_global_loop a, b
+	IF sfx_global_flags_bits&1
+		db a
+		dh b
+		dl b
+	ELSE
+		error "sfx global loop bit isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_global_note_sustain_length a
+	IF sfx_global_flags_bits&2
+		db a
+	ELSE
+		error "sfx global note sustain length bit isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_global_transpose a
+	IF sfx_global_flags_bits&4
+		db a
+	ELSE
+		error "sfx global transpose bit isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_frames a
+	db a
+ENDM
+
+MACRO sfx_channel_flags a
+	db a
+ENDM
+
+MACRO sfx_pulse1_command_flags a
+	db a
+ENDM
+
+MACRO sfx_pulse1_instrument a
+	IF sfx_channel_flags_bits&1
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+	IF sfx_pulse1_command_flags_bits&1
+		db a
+	ELSE
+		error "sfx pulse1 instrument command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse1_duty_cycle a
+	IF sfx_channel_flags_bits&1
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+	IF sfx_pulse1_command_flags_bits&2
+		db a<<6
+	ELSE
+		error "sfx pulse1 duty cycle command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse1_volume a
+	IF sfx_channel_flags_bits&1
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+	IF sfx_pulse1_command_flags_bits&4
+	ELSE
+		error "sfx pulse1 volume command isn't set"
+	ENDIF
+	IF a < 0 || a > $f
+		error "Invalid volume"
+	ELSE
+		db a
+	ENDIF
+ENDM
+
+MACRO sfx_pulse1_pitch_slide a
+	IF sfx_channel_flags_bits&1
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+	IF sfx_pulse1_command_flags_bits&8
+		db a
+	ELSE
+		error "sfx pulse1 pitch slide command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse1_pitch_tune a
+	IF sfx_channel_flags_bits&1
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+	IF sfx_pulse1_command_flags_bits&16
+		db a
+	ELSE
+		error "sfx pulse1 pitch tune command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse2_command_flags a
+	db a
+ENDM
+
+MACRO sfx_pulse2_instrument a
+	IF sfx_channel_flags_bits&2
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+	IF sfx_pulse2_command_flags_bits&1
+		db a
+	ELSE
+		error "sfx pulse2 instrument command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse2_duty_cycle a
+	IF sfx_channel_flags_bits&2
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+	IF sfx_pulse2_command_flags_bits&2
+		db a<<6
+	ELSE
+		error "sfx pulse2 duty cycle command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse2_volume a
+	IF sfx_channel_flags_bits&2
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+	IF sfx_pulse2_command_flags_bits&4
+	ELSE
+		error "sfx pulse2 volume command isn't set"
+	ENDIF
+	IF a < 0 || a > $f
+		error "Invalid volume"
+	ELSE
+		db a
+	ENDIF
+ENDM
+
+MACRO sfx_pulse2_pitch_slide a
+	IF sfx_channel_flags_bits&2
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+	IF sfx_pulse2_command_flags_bits&8
+		db a
+	ELSE
+		error "sfx pulse2 pitch slide command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse2_pitch_tune a
+	IF sfx_channel_flags_bits&2
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+	IF sfx_pulse2_command_flags_bits&16
+		db a
+	ELSE
+		error "sfx pulse2 pitch tune command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_command_flags a
+	db a
+ENDM
+
+MACRO sfx_triangle_instrument a
+	IF sfx_channel_flags_bits&4
+	ELSE
+		error "sfx triangle isn't set"
+	ENDIF
+	IF sfx_triangle_command_flags_bits&1
+		db a
+	ELSE
+		error "sfx triangle instrument command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_duty_cycle a
+	IF sfx_channel_flags_bits&4
+	ELSE
+		error "sfx triangle isn't set"
+	ENDIF
+	IF sfx_triangle_command_flags_bits&2
+		db a<<6
+	ELSE
+		error "sfx triangle duty cycle command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_volume a
+	IF sfx_channel_flags_bits&4
+	ELSE
+		error "sfx triangle isn't set"
+	ENDIF
+	IF sfx_triangle_command_flags_bits&4
+		db a
+	ELSE
+		error "sfx triangle volume command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_pitch_slide a
+	IF sfx_channel_flags_bits&4
+	ELSE
+		error "sfx triangle isn't set"
+	ENDIF
+	IF sfx_triangle_command_flags_bits&8
+		db a
+	ELSE
+		error "sfx triangle pitch slide command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_pitch_tune a
+	IF sfx_channel_flags_bits&4
+	ELSE
+		error "sfx triangle isn't set"
+	ENDIF
+	IF sfx_triangle_command_flags_bits&16
+		db a
+	ELSE
+		error "sfx triangle pitch tune command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_noise_command_flags a
+	db a
+ENDM
+
+MACRO sfx_noise_instrument a
+	IF sfx_channel_flags_bits&8
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
+	IF sfx_noise_command_flags_bits&1
+		db a
+	ELSE
+		error "sfx noise instrument command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_noise_duty_cycle a
+	IF sfx_channel_flags_bits&8
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
+	IF sfx_noise_command_flags_bits&2
+		db a<<6
+	ELSE
+		error "sfx noise duty cycle command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_noise_volume a
+	IF sfx_channel_flags_bits&8
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
+	IF sfx_noise_command_flags_bits&4
+	ELSE
+		error "sfx noise volume command isn't set"
+	ENDIF
+	IF a < 0 || a > $f
+		error "Invalid volume"
+	ELSE
+		db a
+	ENDIF
+ENDM
+
+MACRO sfx_noise_pitch_slide a
+	IF sfx_channel_flags_bits&8
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
+	IF sfx_noise_command_flags_bits&8
+		db a
+	ELSE
+		error "sfx noise pitch slide command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_noise_pitch_tune a
+	IF sfx_channel_flags_bits&8
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
+	IF sfx_noise_command_flags_bits&16
+		db a
+	ELSE
+		error "sfx noise pitch tune command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_note a
+	db a+1
+ENDM
+
+MACRO sfx_noise_note a
+	db a+1
+ENDM
+
+MACRO sfx_end
+	db $ff
 ENDM
