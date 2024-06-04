@@ -645,7 +645,11 @@ MACRO sfx_note a
 ENDM
 
 MACRO sfx_noise_note a
-	db a+1
+	IF a < 0 || a > $1e
+		error "sfx noise note is out of range"
+	ELSE
+		db a+1
+	ENDIF
 ENDM
 
 MACRO sfx_end
