@@ -645,6 +645,10 @@ MACRO sfx_note a
 ENDM
 
 MACRO sfx_noise_note a
+	IF sfx_channel_flags_bits&8
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
 	IF a < 0 || a > $1e
 		error "sfx noise note is out of range"
 	ELSE
