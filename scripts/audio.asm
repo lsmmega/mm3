@@ -440,6 +440,14 @@ MACRO sfx_pulse1_pitch_tune a
 	ENDIF
 ENDM
 
+MACRO sfx_pulse1_note a
+	IF sfx_channel_flags_bits&1
+		db a+1
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+ENDM
+
 MACRO sfx_pulse2_command_flags a
 	db a
 ENDM
@@ -508,6 +516,14 @@ MACRO sfx_pulse2_pitch_tune a
 	ENDIF
 ENDM
 
+MACRO sfx_pulse2_note a
+	IF sfx_channel_flags_bits&2
+		db a+1
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+ENDM
+
 MACRO sfx_triangle_command_flags a
 	db a
 ENDM
@@ -569,6 +585,14 @@ MACRO sfx_triangle_pitch_tune a
 		db a
 	ELSE
 		error "sfx triangle pitch tune command isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_note a
+	IF sfx_channel_flags_bits&4
+		db a+1
+	ELSE
+		error "sfx triangle isn't set"
 	ENDIF
 ENDM
 
@@ -638,10 +662,6 @@ MACRO sfx_noise_pitch_tune a
 	ELSE
 		error "sfx noise pitch tune command isn't set"
 	ENDIF
-ENDM
-
-MACRO sfx_note a
-	db a+1
 ENDM
 
 MACRO sfx_noise_note a
