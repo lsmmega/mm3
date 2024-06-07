@@ -552,7 +552,7 @@ MACRO sfx_triangle_duty_cycle a
 	ENDIF
 ENDM
 
-MACRO sfx_triangle_volume a
+MACRO sfx_triangle_fraction a
 	IF sfx_channel_flags_bits&4
 	ELSE
 		error "sfx triangle isn't set"
@@ -560,7 +560,7 @@ MACRO sfx_triangle_volume a
 	IF sfx_triangle_command_flags_bits&4
 		db a
 	ELSE
-		error "sfx triangle volume command isn't set"
+		error "sfx triangle fraction command isn't set"
 	ENDIF
 ENDM
 
