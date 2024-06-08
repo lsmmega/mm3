@@ -1,4 +1,4 @@
-sfx_damagemm:
+sfx_damage_mm:
 ;1
 	sfx_priority $10
 	sfx_global_flags $2
