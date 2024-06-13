@@ -6,6 +6,7 @@ sfx_boss_door_main_loop:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $02
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -27,6 +28,7 @@ sfx_boss_door_main_loop:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $04
 	sfx_channel_flags $0
 	sfx_channel_flags_bits = $0
@@ -36,6 +38,7 @@ sfx_boss_door_main_loop:
 	sfx_global_flags_bits = $3
 	sfx_global_loop 2, sfx_boss_door_main_loop
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $02
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a

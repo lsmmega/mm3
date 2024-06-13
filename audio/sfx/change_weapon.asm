@@ -4,6 +4,7 @@ sfx_change_weapon:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $05
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -18,6 +19,7 @@ sfx_change_weapon:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $08
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2

@@ -442,7 +442,7 @@ ENDM
 
 MACRO sfx_pulse1_note a
 	IF sfx_channel_flags_bits&1
-		db a+1
+		db a+1-sfx_global_transpose_note
 	ELSE
 		error "sfx pulse1 isn't set"
 	ENDIF
@@ -518,7 +518,7 @@ ENDM
 
 MACRO sfx_pulse2_note a
 	IF sfx_channel_flags_bits&2
-		db a+1
+		db a+1-sfx_global_transpose_note
 	ELSE
 		error "sfx pulse2 isn't set"
 	ENDIF
@@ -590,7 +590,7 @@ ENDM
 
 MACRO sfx_triangle_note a
 	IF sfx_channel_flags_bits&4
-		db a+1
+		db a+1-sfx_global_transpose_note
 	ELSE
 		error "sfx triangle isn't set"
 	ENDIF
