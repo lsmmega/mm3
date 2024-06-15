@@ -1,3 +1,51 @@
+MACRO attack a
+	IF a < 0 || a > $1f
+		error "Invalid attack"
+	ELSE
+		db a
+	ENDIF
+ENDM
+
+MACRO decay a
+	IF a < 0 || a > $1f
+		error "Invalid decay"
+	ELSE
+		db a
+	ENDIF
+ENDM
+
+MACRO sustain_volume_rate a
+	IF a < 0 || a > $f
+		error "Invalid sustain volume rate"
+	ELSE
+		db ($f-a)<<4
+	ENDIF
+ENDM
+
+MACRO release a
+	IF a < 0 || a > $1f
+		error "Invalid release"
+	ELSE
+		db a
+	ENDIF
+ENDM
+
+MACRO vibrato_rate a
+	db a
+ENDM
+
+MACRO pitch_vibrato a
+	db a
+ENDM
+
+MACRO volume_vibrato a
+	db a
+ENDM
+
+MACRO noise_flags a
+	db a
+ENDM
+
 MACRO music_pointers
 	db 0
 ENDM

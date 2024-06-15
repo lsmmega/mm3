@@ -2,8 +2,8 @@
 	db (audio_data_end-audio_data_start)/2
 
 ;instruments_pointers
-	dh instruments_pointers
-	dl instruments_pointers
+	dh instruments_data
+	dl instruments_data
 
 ;music
 	audio_data_start
