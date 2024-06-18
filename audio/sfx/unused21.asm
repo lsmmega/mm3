@@ -27,7 +27,7 @@ sfx_unused21:
 	sfx_triangle_fraction $00
 	sfx_triangle_note A_7_
 
-:3
+;3
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
