@@ -41,7 +41,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -52,7 +52,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -63,7 +63,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -74,7 +74,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -85,7 +85,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -96,7 +96,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -107,7 +107,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -118,7 +118,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
@@ -129,7 +129,7 @@ sfx_unused29:
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $eb
 	sfx_global_transpose_note = $00
-	sfx_frames $00
+	sfx_frames $08
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
 	sfx_noise_volume $0
