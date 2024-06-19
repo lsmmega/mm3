@@ -1,4 +1,4 @@
-sfx_magnet:
+sfx_magnet_missile:
 ;1
 	sfx_priority $07
 	sfx_global_flags $2
