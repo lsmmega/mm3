@@ -15,7 +15,6 @@ sfx_top_spin_main_loop:
 	sfx_noise_instrument $2e
 	sfx_noise_volume $f
 	sfx_noise_note 9
-	sfx_end
 
 ;2
 	sfx_global_flags $3
