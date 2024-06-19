@@ -1,4 +1,4 @@
-sfx_gemini:
+sfx_gemini_laser:
 ;1
 	sfx_priority $07
 	sfx_global_flags $2
