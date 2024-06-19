@@ -2,7 +2,7 @@ sfx_top_spin:
 ;1
 	sfx_priority $07
 
-sfx_top_spin_main_loop:
+sfx_top_spin_loop1:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $bf
@@ -19,7 +19,7 @@ sfx_top_spin_main_loop:
 ;2
 	sfx_global_flags $3
 	sfx_global_flags_bits = $3
-	sfx_global_loop 2, sfx_top_spin_main_loop
+	sfx_global_loop 2, sfx_top_spin_loop1
 	sfx_global_note_sustain_length $01
 	sfx_global_transpose_note = $00
 	sfx_frames $01
