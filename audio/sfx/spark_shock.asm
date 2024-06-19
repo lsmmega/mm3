@@ -2,7 +2,7 @@ sfx_spark_shock:
 ;1
 	sfx_priority $09
 
-sfx_spark_shock_main_loop:
+sfx_spark_shock_loop1:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $96
@@ -32,7 +32,7 @@ sfx_spark_shock_main_loop:
 ;3
 	sfx_global_flags $1
 	sfx_global_flags_bits = $1
-	sfx_global_loop 1, sfx_spark_shock_main_loop
+	sfx_global_loop 1, sfx_spark_shock_loop1
 	sfx_global_transpose_note = $00
 	sfx_frames $00
 	sfx_channel_flags $0
