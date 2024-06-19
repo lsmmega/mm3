@@ -93,20 +93,20 @@
 	dl sfx_ufo
 	dh sfx_unused29
 	dl sfx_unused29
-	dh sfx_magnet
-	dl sfx_magnet
-	dh sfx_gemini
-	dl sfx_gemini
-	dh sfx_top
-	dl sfx_top
-	dh sfx_spark
-	dl sfx_spark
-	dh sfx_shadow
-	dl sfx_shadow
+	dh sfx_magnet_missile
+	dl sfx_magnet_missile
+	dh sfx_gemini_laser
+	dl sfx_gemini_laser
+	dh sfx_top_spin
+	dl sfx_top_spin
+	dh sfx_spark_shock
+	dl sfx_spark_shock
+	dh sfx_shadow_blade
+	dl sfx_shadow_blade
 	dh sfx_unused2f
 	dl sfx_unused2f
-	dh sfx_hard
-	dl sfx_hard
+	dh sfx_hard_smash
+	dl sfx_hard_smash
 	dh sfx_after_get_weapon_energy ;use in actual game but low priority than sfx_open_menu
 	dl sfx_after_get_weapon_energy
 	dh sfx_get_weapon_energy
