@@ -25,7 +25,7 @@
 	track_death = #$17
 	track_destroy_enemy = #$18
 	track_shoot_recoil = #$19
-	track_open_menu = #$1a
+	track_open_menu1 = #$1a
 	track_change_weapon = #$1b
 	track_health_bar = #$1c
 	track_boss_door = #$1d
@@ -48,7 +48,7 @@
 	track_shadow_blade = #$2e
 	;track_unused2f = #$2f
 	track_hard_smash = #$30
-	track_after_get_weapon_energy = #$31
+	track_open_menu2 = #$31
 	track_get_weapon_energy = #$32
 	track_game_start = #$33
 	track_teleport = #$34
