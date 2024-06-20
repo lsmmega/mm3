@@ -61,8 +61,8 @@
 	dl sfx_destroy_enemy
 	dh sfx_shoot_recoil
 	dl sfx_shoot_recoil
-	dh sfx_open_menu
-	dl sfx_open_menu
+	dh sfx_open_menu1
+	dl sfx_open_menu1
 	dh sfx_change_weapon
 	dl sfx_change_weapon
 	dh sfx_health_bar
@@ -107,8 +107,8 @@
 	dl sfx_unused2f
 	dh sfx_hard_smash
 	dl sfx_hard_smash
-	dh sfx_after_get_weapon_energy ;use in actual game but low priority than sfx_open_menu
-	dl sfx_after_get_weapon_energy
+	dh sfx_open_menu2 ;use in actual game but low priority than sfx_open_menu
+	dl sfx_open_menu2
 	dh sfx_get_weapon_energy
 	dl sfx_get_weapon_energy
 
