@@ -1,8 +1,8 @@
-sfx_health_bar:
+sfx_gain_bar:
 ;1
 	sfx_priority $09
 
-sfx_health_bar_loop1:
+sfx_gain_bar_loop1:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
@@ -26,7 +26,7 @@ sfx_health_bar_loop1:
 ;2
 	sfx_global_flags $1
 	sfx_global_flags_bits = $1
-	sfx_global_loop 2, sfx_health_bar_loop1
+	sfx_global_loop 2, sfx_gain_bar_loop1
 	sfx_global_transpose_note = $00
 	sfx_frames $00
 	sfx_channel_flags $0
