@@ -1,4 +1,4 @@
-sfx_open_menu:
+sfx_open_menu1:
 ;1
 	sfx_priority $15
 	sfx_global_flags $2
