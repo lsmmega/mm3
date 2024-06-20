@@ -27,7 +27,7 @@
 	track_shoot_recoil = #$19
 	track_open_menu1 = #$1a
 	track_change_weapon = #$1b
-	track_health_bar = #$1c
+	track_gain_bar = #$1c
 	track_boss_door = #$1d
 	track_cannon = #$1e
 	track_water = #$1f
