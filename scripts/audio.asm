@@ -724,6 +724,10 @@ MACRO sfx_noise_note a
 	ENDIF
 ENDM
 
+MACRO sfx_noise_N_flag
+	db $ff
+ENDM
+
 MACRO sfx_end
 	db $ff
 ENDM
