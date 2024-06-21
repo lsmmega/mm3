@@ -724,8 +724,12 @@ MACRO sfx_noise_note a
 	ENDIF
 ENDM
 
-MACRO sfx_noise_N_flag
-	db $ff
+MACRO sfx_noise_note_N_flag
+	IF sfx_channel_flags_bits&8
+		db $ff
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
 ENDM
 
 MACRO sfx_end
