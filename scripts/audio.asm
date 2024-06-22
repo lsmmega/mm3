@@ -496,6 +496,22 @@ MACRO sfx_pulse1_note a
 	ENDIF
 ENDM
 
+MACRO sfx_pulse1_ADSR_volume_end
+	IF sfx_channel_flags_bits&1
+		db 0
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse1_note_sustain
+	IF sfx_channel_flags_bits&1
+		db $ff
+	ELSE
+		error "sfx pulse1 isn't set"
+	ENDIF
+ENDM
+
 MACRO sfx_pulse2_command_flags a
 	db a
 ENDM
@@ -572,6 +588,22 @@ MACRO sfx_pulse2_note a
 	ENDIF
 ENDM
 
+MACRO sfx_pulse2_ADSR_volume_end
+	IF sfx_channel_flags_bits&2
+		db 0
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_pulse2_note_sustain
+	IF sfx_channel_flags_bits&2
+		db $ff
+	ELSE
+		error "sfx pulse2 isn't set"
+	ENDIF
+ENDM
+
 MACRO sfx_triangle_command_flags a
 	db a
 ENDM
@@ -639,6 +671,22 @@ ENDM
 MACRO sfx_triangle_note a
 	IF sfx_channel_flags_bits&4
 		db a+1-sfx_global_transpose_note
+	ELSE
+		error "sfx triangle isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_ADSR_fraction_end
+	IF sfx_channel_flags_bits&4
+		db 0
+	ELSE
+		error "sfx triangle isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_triangle_note_sustain
+	IF sfx_channel_flags_bits&4
+		db $ff
 	ELSE
 		error "sfx triangle isn't set"
 	ENDIF
@@ -724,7 +772,15 @@ MACRO sfx_noise_note a
 	ENDIF
 ENDM
 
-MACRO sfx_noise_note_N_flag
+MACRO sfx_noise_ADSR_volume_end
+	IF sfx_channel_flags_bits&8
+		db 0
+	ELSE
+		error "sfx noise isn't set"
+	ENDIF
+ENDM
+
+MACRO sfx_noise_note_sustain
 	IF sfx_channel_flags_bits&8
 		db $ff
 	ELSE
