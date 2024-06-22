@@ -1,5 +1,7 @@
 base $8000
+incsrc .\scripts\audio.asm
 ;incsrc audio.asm
+pad $8a40
 incsrc track_data_pointers.asm
 ;incsrc instruments.asm
 pad $8c9d
