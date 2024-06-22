@@ -2,49 +2,49 @@
 	db (track_data_end-track_data_start)/2
 
 ;instruments_pointers
-	dh instruments_data
-	dl instruments_data
+	;dh instruments_data
+	;dl instruments_data
 
 ;music
 	track_data_start
 	dh music_title
 	dl music_title
-	dh music_needle
-	dl music_needle
-	dh music_magnet
-	dl music_magnet
-	dh music_gemini
-	dl music_gemini
-	dh music_hard
-	dl music_hard
-	dh music_top
-	dl music_top
-	dh music_snake
-	dl music_snake
-	dh music_spark
-	dl music_spark
-	dh music_shadow
-	dl music_shadow
-	dh music_wily1
-	dl music_wily1
-	dh music_wily3
-	dl music_wily3
-	dh music_wily5
-	dl music_wily5
-	dh music_boss
-	dl music_boss
-	dh music_wily_boss
-	dl music_wily_boss
-	dh music_pass_word
-	dl music_pass_word
-	dh music_ending
-	dl music_ending
-	dh music_stage_select
-	dl music_stage_select
-	dh music_proto_whistle
-	dl music_proto_whistle
-	dh music_proto_theme
-	dl music_proto_theme
+	;dh music_needle
+	;dl music_needle
+	;dh music_magnet
+	;dl music_magnet
+	;dh music_gemini
+	;dl music_gemini
+	;dh music_hard
+	;dl music_hard
+	;dh music_top
+	;dl music_top
+	;dh music_snake
+	;dl music_snake
+	;dh music_spark
+	;dl music_spark
+	;dh music_shadow
+	;dl music_shadow
+	;dh music_wily1
+	;dl music_wily1
+	;dh music_wily3
+	;dl music_wily3
+	;dh music_wily5
+	;dl music_wily5
+	;dh music_boss
+	;dl music_boss
+	;dh music_wily_boss
+	;dl music_wily_boss
+	;dh music_pass_word
+	;dl music_pass_word
+	;dh music_ending
+	;dl music_ending
+	;dh music_stage_select
+	;dl music_stage_select
+	;dh music_proto_whistle
+	;dl music_proto_whistle
+	;dh music_proto_theme
+	;dl music_proto_theme
 
 ;sfx
 	dh sfx_landing
@@ -113,20 +113,20 @@
 	dl sfx_get_weapon_energy
 
 ;music
-	dh music_game_start
-	dl music_game_start
+	;dh music_game_start
+	;dl music_game_start
 
 ;sfx
 	dh sfx_teleport
 	dl sfx_teleport
 
 ;music
-	dh music_get_weapon
-	dl music_get_weapon
-	dh music_wily_map
-	dl music_wily_map
-	dh music_all_stage_clear
-	dl music_all_stage_clear
-	dh music_stage_clear
-	dl music_stage_clear
+	;dh music_get_weapon
+	;dl music_get_weapon
+	;dh music_wily_map
+	;dl music_wily_map
+	;dh music_all_stage_clear
+	;dl music_all_stage_clear
+	;dh music_stage_clear
+	;dl music_stage_clear
 	track_data_end
