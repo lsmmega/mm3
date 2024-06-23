@@ -5,8 +5,9 @@
 	;dh instruments_data
 	;dl instruments_data
 
+
+track_data_start
 ;music
-	track_data_start
 	dh music_title
 	dl music_title
 	;dh music_needle
@@ -129,4 +130,4 @@
 	;dl music_all_stage_clear
 	;dh music_stage_clear
 	;dl music_stage_clear
-	track_data_end
+track_data_end
