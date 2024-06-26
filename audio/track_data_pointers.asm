@@ -2,8 +2,8 @@
 	db (track_data_end-track_data_start)/2
 
 ;instruments_pointers
-	;dh instruments_data
-	;dl instruments_data
+	dh instruments_data
+	dl instruments_data
 
 
 track_data_start
