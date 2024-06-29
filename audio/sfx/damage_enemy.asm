@@ -1,4 +1,4 @@
-sfx_destroy_enemy:
+sfx_damage_enemy:
 ;1
 	sfx_priority $09
 	sfx_global_flags $2

@@ -30,7 +30,7 @@ incsrc .\sfx\1up.asm
 incsrc .\sfx\shoot.asm
 incsrc .\sfx\damage_mm.asm
 incsrc .\sfx\death.asm
-incsrc .\sfx\destroy_enemy.asm
+incsrc .\sfx\damage_enemy.asm
 incsrc .\sfx\shoot_recoil.asm
 incsrc .\sfx\open_menu1.asm
 incsrc .\sfx\change_weapon.asm

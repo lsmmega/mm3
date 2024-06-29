@@ -23,7 +23,7 @@
 	track_shoot = #$15
 	track_damage_mm = #$16
 	track_death = #$17
-	track_destroy_enemy = #$18
+	track_damage_enemy = #$18
 	track_shoot_recoil = #$19
 	track_open_menu1 = #$1a
 	track_change_weapon = #$1b

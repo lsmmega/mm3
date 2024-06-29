@@ -58,8 +58,8 @@ track_data_start
 	dl sfx_damage_mm
 	dh sfx_death
 	dl sfx_death
-	dh sfx_destroy_enemy
-	dl sfx_destroy_enemy
+	dh sfx_damage_enemy
+	dl sfx_damage_enemy
 	dh sfx_shoot_recoil
 	dl sfx_shoot_recoil
 	dh sfx_open_menu1
