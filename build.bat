@@ -7,5 +7,6 @@ bmp2nes gfx/obj/bar.bmp
 bmp2nes gfx/obj/1up.bmp
 bmp2nes gfx/obj/capsule/large_wpn_capsule.bmp
 bmp2nes gfx/obj/wpn/mega_buster.bmp
+bmp2nes gfx/obj/ready.bmp
 asm6 main.asm mm3.nes
 @pause
