@@ -1,4 +1,5 @@
 rom_obj := \
+	audio.o  \
 	header.o \
 	bank00.o \
 	bank01.o \
@@ -22,8 +23,6 @@ rom_obj := \
 	bank13.o \
 	bank14.o \
 	bank15.o \
-	bank16.o \
-	bank17.o \
 	bank18.o \
 	bank19.o \
 	bank1A.o \
