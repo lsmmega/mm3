@@ -165,7 +165,8 @@ header := \
 	30/*
 
 gfx := \
-	gfx.asm
+	gfx.asm \
+	gfx/*.bmp
 
 _gfx := \
 	gfx/gfx.bmp gfx/gfx.chr
