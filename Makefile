@@ -37,8 +37,8 @@ cfg := \
 	mm3.cfg
 
 header := \
-	header.asm \
-	header/*
+	constants/* \
+	header.asm
 
 0 := \
 	0.asm \
