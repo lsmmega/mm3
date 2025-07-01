@@ -1,2 +1,2 @@
 .SEGMENT "GFX"
-.INCBIN "gfx/gfx.chr"
+.INCBIN  "gfx/gfx.chr"
