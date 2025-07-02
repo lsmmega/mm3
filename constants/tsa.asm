@@ -1,0 +1,18 @@
+.ENUM
+	background
+	wall
+	ladder
+	shock
+	laddertop
+	spikes
+	foreground
+	enemy
+	water
+	usused_09
+	usused_0a
+	usused_0b
+	usused_0c
+	usused_0d
+	usused_0e
+	usused_0f
+.ENDENUM

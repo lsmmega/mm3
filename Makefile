@@ -45,6 +45,7 @@ home := \
 	home/*
 
 0 := \
+	constants/* \
 	0.asm \
 	0/*
 
