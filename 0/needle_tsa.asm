@@ -257,262 +257,262 @@
 	.BYTE $00, $00, $00, $00 ;FF
 
 ;topleft
-	.BYTE $00
-	.BYTE $DD
-	.BYTE $DE
-	.BYTE $10
-	.BYTE $EE
-	.BYTE $6D
-	.BYTE $8B
-	.BYTE $7C
-	.BYTE $01
-	.BYTE $69
-	.BYTE $6A
-	.BYTE $6A
-	.BYTE $5C
-	.BYTE $10
-	.BYTE $21
-	.BYTE $7C
-	.BYTE $60
-	.BYTE $56
-	.BYTE $CC
-	.BYTE $EE
-	.BYTE $02
-	.BYTE $1C
-	.BYTE $01
-	.BYTE $BE
-	.BYTE $8C
-	.BYTE $8D
-	.BYTE $8D
-	.BYTE $8D
-	.BYTE $44
-	.BYTE $AC
-	.BYTE $AE
-	.BYTE $01
-	.BYTE $11
-	.BYTE $11
-	.BYTE $11
-	.BYTE $6E
-	.BYTE $3D
-	.BYTE $3E
-	.BYTE $10
-	.BYTE $ED
-	.BYTE $66
-	.BYTE $68
-	.BYTE $77
-	.BYTE $6E
-	.BYTE $2D
-	.BYTE $4F
-	.BYTE $3D
-	.BYTE $3E
-	.BYTE $3D
-	.BYTE $3E
-	.BYTE $3E
-	.BYTE $3E
-	.BYTE $2D
-	.BYTE $4F
-	.BYTE $5E
-	.BYTE $3E
-	.BYTE $2D
-	.BYTE $48
-	.BYTE $01
-	.BYTE $2D
-	.BYTE $49
-	.BYTE $0C
-	.BYTE $1C
-	.BYTE $8C
-	.BYTE $00
-	.BYTE $B4
-	.BYTE $B2
-	.BYTE $EC
-	.BYTE $00
-	.BYTE $62
-	.BYTE $4E
-	.BYTE $5E
-	.BYTE $E2
-	.BYTE $11
-	.BYTE $11
-	.BYTE $11
-	.BYTE $B7
-	.BYTE $64
-	.BYTE $5E
-	.BYTE $3E
-	.BYTE $10
-	.BYTE $10
-	.BYTE $5F
-	.BYTE $5F
-	.BYTE $3E
-	.BYTE $7E
-	.BYTE $0C
-	.BYTE $2D
-	.BYTE $10
-	.BYTE $74
-	.BYTE $72
-	.BYTE $10
-	.BYTE $10
-	.BYTE $0E
-	.BYTE $3D
-	.BYTE $2D
-	.BYTE $02
-	.BYTE $56
-	.BYTE $43
-	.BYTE $2C
-	.BYTE $10
-	.BYTE $10
-	.BYTE $46
-	.BYTE $01
-	.BYTE $02
-	.BYTE $8B
-	.BYTE $10
-	.BYTE $00
-	.BYTE $01
-	.BYTE $46
-	.BYTE $BF
-	.BYTE $01
-	.BYTE $40
-	.BYTE $01
-	.BYTE $22
-	.BYTE $24
-	.BYTE $32
-	.BYTE $01
-	.BYTE $35
-	.BYTE $00
-	.BYTE $50
-	.BYTE $10
-	.BYTE $00
-	.BYTE $BF
-	.BYTE $2E
-	.BYTE $2F
-	.BYTE $35
-	.BYTE $00
-	.BYTE $02
-	.BYTE $32
-	.BYTE $24
-	.BYTE $23
-	.BYTE $03
-	.BYTE $00
-	.BYTE $6A
-	.BYTE $00
-	.BYTE $12
-	.BYTE $32
-	.BYTE $01
-	.BYTE $01
-	.BYTE $02
-	.BYTE $00
-	.BYTE $32
-	.BYTE $01
-	.BYTE $5C
-	.BYTE $DD
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
-	.BYTE $00
+	.BYTE $00 ;00
+	.BYTE $DD ;01
+	.BYTE $DE ;02
+	.BYTE $10 ;03
+	.BYTE $EE ;04
+	.BYTE $6D ;05
+	.BYTE $8B ;06
+	.BYTE $7C ;07
+	.BYTE $01 ;08
+	.BYTE $69 ;09
+	.BYTE $6A ;0A
+	.BYTE $6A ;0B
+	.BYTE $5C ;0C
+	.BYTE $10 ;0D
+	.BYTE $21 ;0E
+	.BYTE $7C ;0F
+	.BYTE $60 ;10
+	.BYTE $56 ;11
+	.BYTE $CC ;12
+	.BYTE $EE ;13
+	.BYTE $02 ;14
+	.BYTE $1C ;15
+	.BYTE $01 ;16
+	.BYTE $BE ;17
+	.BYTE $8C ;18
+	.BYTE $8D ;19
+	.BYTE $8D ;1A
+	.BYTE $8D ;1B
+	.BYTE $44 ;1C
+	.BYTE $AC ;1D
+	.BYTE $AE ;1E
+	.BYTE $01 ;1F
+	.BYTE $11 ;20
+	.BYTE $11 ;21
+	.BYTE $11 ;22
+	.BYTE $6E ;23
+	.BYTE $3D ;24
+	.BYTE $3E ;25
+	.BYTE $10 ;26
+	.BYTE $ED ;27
+	.BYTE $66 ;28
+	.BYTE $68 ;29
+	.BYTE $77 ;2A
+	.BYTE $6E ;2B
+	.BYTE $2D ;2C
+	.BYTE $4F ;2D
+	.BYTE $3D ;2E
+	.BYTE $3E ;2F
+	.BYTE $3D ;30
+	.BYTE $3E ;31
+	.BYTE $3E ;32
+	.BYTE $3E ;33
+	.BYTE $2D ;34
+	.BYTE $4F ;35
+	.BYTE $5E ;36
+	.BYTE $3E ;37
+	.BYTE $2D ;38
+	.BYTE $48 ;39
+	.BYTE $01 ;3A
+	.BYTE $2D ;3B
+	.BYTE $49 ;3C
+	.BYTE $0C ;3D
+	.BYTE $1C ;3E
+	.BYTE $8C ;3F
+	.BYTE $00 ;40
+	.BYTE $B4 ;41
+	.BYTE $B2 ;42
+	.BYTE $EC ;43
+	.BYTE $00 ;44
+	.BYTE $62 ;45
+	.BYTE $4E ;46
+	.BYTE $5E ;47
+	.BYTE $E2 ;48
+	.BYTE $11 ;49
+	.BYTE $11 ;4A
+	.BYTE $11 ;4B
+	.BYTE $B7 ;4C
+	.BYTE $64 ;4D
+	.BYTE $5E ;4E
+	.BYTE $3E ;4F
+	.BYTE $10 ;50
+	.BYTE $10 ;51
+	.BYTE $5F ;52
+	.BYTE $5F ;53
+	.BYTE $3E ;54
+	.BYTE $7E ;55
+	.BYTE $0C ;56
+	.BYTE $2D ;57
+	.BYTE $10 ;58
+	.BYTE $74 ;59
+	.BYTE $72 ;5A
+	.BYTE $10 ;5B
+	.BYTE $10 ;5C
+	.BYTE $0E ;5D
+	.BYTE $3D ;5E
+	.BYTE $2D ;5F
+	.BYTE $02 ;60
+	.BYTE $56 ;61
+	.BYTE $43 ;62
+	.BYTE $2C ;63
+	.BYTE $10 ;64
+	.BYTE $10 ;65
+	.BYTE $46 ;66
+	.BYTE $01 ;67
+	.BYTE $02 ;68
+	.BYTE $8B ;69
+	.BYTE $10 ;6A
+	.BYTE $00 ;6B
+	.BYTE $01 ;6C
+	.BYTE $46 ;6D
+	.BYTE $BF ;6E
+	.BYTE $01 ;6F
+	.BYTE $40 ;70
+	.BYTE $01 ;71
+	.BYTE $22 ;72
+	.BYTE $24 ;73
+	.BYTE $32 ;74
+	.BYTE $01 ;75
+	.BYTE $35 ;76
+	.BYTE $00 ;77
+	.BYTE $50 ;78
+	.BYTE $10 ;79
+	.BYTE $00 ;7A
+	.BYTE $BF ;7B
+	.BYTE $2E ;7C
+	.BYTE $2F ;7D
+	.BYTE $35 ;7E
+	.BYTE $00 ;7F
+	.BYTE $02 ;80
+	.BYTE $32 ;81
+	.BYTE $24 ;82
+	.BYTE $23 ;83
+	.BYTE $03 ;84
+	.BYTE $00 ;85
+	.BYTE $6A ;86
+	.BYTE $00 ;87
+	.BYTE $12 ;88
+	.BYTE $32 ;89
+	.BYTE $01 ;8A
+	.BYTE $01 ;8B
+	.BYTE $02 ;8C
+	.BYTE $00 ;8D
+	.BYTE $32 ;8E
+	.BYTE $01 ;8F
+	.BYTE $5C ;90
+	.BYTE $DD ;91
+	.BYTE $00 ;92
+	.BYTE $00 ;93
+	.BYTE $00 ;94
+	.BYTE $00 ;95
+	.BYTE $00 ;96
+	.BYTE $00 ;97
+	.BYTE $00 ;98
+	.BYTE $00 ;99
+	.BYTE $00 ;9A
+	.BYTE $00 ;9B
+	.BYTE $00 ;9C
+	.BYTE $00 ;9D
+	.BYTE $00 ;9E
+	.BYTE $00 ;9F
+	.BYTE $00 ;A0
+	.BYTE $00 ;A1
+	.BYTE $00 ;A2
+	.BYTE $00 ;A3
+	.BYTE $00 ;A4
+	.BYTE $00 ;A5
+	.BYTE $00 ;A6
+	.BYTE $00 ;A7
+	.BYTE $00 ;A8
+	.BYTE $00 ;A9
+	.BYTE $00 ;AA
+	.BYTE $00 ;AB
+	.BYTE $00 ;AC
+	.BYTE $00 ;AD
+	.BYTE $00 ;AE
+	.BYTE $00 ;AF
+	.BYTE $00 ;B0
+	.BYTE $00 ;B1
+	.BYTE $00 ;B2
+	.BYTE $00 ;B3
+	.BYTE $00 ;B4
+	.BYTE $00 ;B5
+	.BYTE $00 ;B6
+	.BYTE $00 ;B7
+	.BYTE $00 ;B8
+	.BYTE $00 ;B9
+	.BYTE $00 ;BA
+	.BYTE $00 ;BB
+	.BYTE $00 ;BC
+	.BYTE $00 ;BD
+	.BYTE $00 ;BE
+	.BYTE $00 ;BF
+	.BYTE $00 ;C0
+	.BYTE $00 ;C1
+	.BYTE $00 ;C2
+	.BYTE $00 ;C3
+	.BYTE $00 ;C4
+	.BYTE $00 ;C5
+	.BYTE $00 ;C6
+	.BYTE $00 ;C7
+	.BYTE $00 ;C8
+	.BYTE $00 ;C9
+	.BYTE $00 ;CA
+	.BYTE $00 ;CB
+	.BYTE $00 ;CC
+	.BYTE $00 ;CD
+	.BYTE $00 ;CE
+	.BYTE $00 ;CF
+	.BYTE $00 ;D0
+	.BYTE $00 ;D1
+	.BYTE $00 ;D2
+	.BYTE $00 ;D3
+	.BYTE $00 ;D4
+	.BYTE $00 ;D5
+	.BYTE $00 ;D6
+	.BYTE $00 ;D7
+	.BYTE $00 ;D8
+	.BYTE $00 ;D9
+	.BYTE $00 ;DA
+	.BYTE $00 ;DB
+	.BYTE $00 ;DC
+	.BYTE $00 ;DD
+	.BYTE $00 ;DE
+	.BYTE $00 ;DF
+	.BYTE $00 ;E0
+	.BYTE $00 ;E1
+	.BYTE $00 ;E2
+	.BYTE $00 ;E3
+	.BYTE $00 ;E4
+	.BYTE $00 ;E5
+	.BYTE $00 ;E6
+	.BYTE $00 ;E7
+	.BYTE $00 ;E8
+	.BYTE $00 ;E9
+	.BYTE $00 ;EA
+	.BYTE $00 ;EB
+	.BYTE $00 ;EC
+	.BYTE $00 ;ED
+	.BYTE $00 ;EE
+	.BYTE $00 ;EF
+	.BYTE $00 ;F0
+	.BYTE $00 ;F1
+	.BYTE $00 ;F2
+	.BYTE $00 ;F3
+	.BYTE $00 ;F4
+	.BYTE $00 ;F5
+	.BYTE $00 ;F6
+	.BYTE $00 ;F7
+	.BYTE $00 ;F8
+	.BYTE $00 ;F9
+	.BYTE $00 ;FA
+	.BYTE $00 ;FB
+	.BYTE $00 ;FC
+	.BYTE $00 ;FD
+	.BYTE $00 ;FE
+	.BYTE $00 ;FF
 
 ;topright
 	.BYTE $00 ;00
