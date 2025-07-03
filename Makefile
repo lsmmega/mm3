@@ -55,6 +55,7 @@ home := \
 	1/*
 
 2 := \
+	constants/* \
 	2.asm \
 	2/*
 
