@@ -50,6 +50,7 @@ home := \
 	0/*
 
 1 := \
+	constants/* \
 	1.asm \
 	1/*
 
