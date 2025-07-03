@@ -65,6 +65,7 @@ home := \
 	3/*
 
 4:= \
+	constants/* \
 	4.asm \
 	4/*
 
