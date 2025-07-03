@@ -60,6 +60,7 @@ home := \
 	2/*
 
 3 := \
+	constants/* \
 	3.asm \
 	3/*
 
