@@ -1,3 +1,5 @@
+.INCLUDE "constants/tsa.asm"
+
 	;     topleft, topright, bottomleft, bottomright
 	.BYTE $07, $28, $6A, $28 ;00
 	.BYTE $20, $29, $20, $29 ;01
