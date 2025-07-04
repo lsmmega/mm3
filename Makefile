@@ -70,6 +70,7 @@ home := \
 	4/*
 
 5 := \
+	constants/* \
 	5.asm \
 	5/*
 
