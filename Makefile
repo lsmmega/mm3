@@ -80,6 +80,7 @@ home := \
 	6/*
 
 7 := \
+	constants/* \
 	7.asm \
 	7/*
 
