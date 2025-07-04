@@ -90,6 +90,7 @@ home := \
 	8/*
 
 9 := \
+	constants/* \
 	9.asm \
 	9/*
 
