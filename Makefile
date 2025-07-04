@@ -85,6 +85,7 @@ home := \
 	7/*
 
 8 := \
+	constants/* \
 	8.asm \
 	8/*
 
