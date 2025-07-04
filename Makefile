@@ -75,6 +75,7 @@ home := \
 	5/*
 
 6 := \
+	constants/* \
 	6.asm \
 	6/*
 
