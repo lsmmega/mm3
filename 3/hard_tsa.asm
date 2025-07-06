@@ -1542,8 +1542,8 @@
 	.BYTE background << 4 | 0 ;F8
 	.BYTE background << 4 | 0 ;F9
 	.BYTE background << 4 | 0 ;FA
-	.BYTE usused_0c << 4  | 0 ;FB
+	.BYTE unused_0c << 4  | 0 ;FB
 	.BYTE background << 4 | 0 ;FC
-	.BYTE usused_0f << 4  | 2 | $C ;FD, unknown
+	.BYTE unused_0f << 4  | 2 | $C ;FD, unknown
 	.BYTE laddertop << 4  | 3 ;FE
-	.BYTE usused_0c << 4  | 1 ;FF
+	.BYTE unused_0c << 4  | 1 ;FF

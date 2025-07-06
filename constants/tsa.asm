@@ -8,11 +8,11 @@
 	foreground
 	enemy
 	water
-	usused_09
-	usused_0a
-	usused_0b
-	usused_0c
-	usused_0d
-	usused_0e
-	usused_0f
+	unused_09
+	unused_0a
+	unused_0b
+	unused_0c
+	unused_0d
+	unused_0e
+	unused_0f
 .ENDENUM
