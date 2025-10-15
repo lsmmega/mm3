@@ -1,2 +1,0 @@
-.SEGMENT "BANK16"
-.INCBIN  "22/22.bin"
