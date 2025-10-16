@@ -10,6 +10,7 @@ music_title:
 
 music_title_pulse_1:
 	current_octave_jump .SET 0
+	current_octave .SET 0
 	current_channel_transpose .SET 0
 	global_transpose 1
 	tempo $01, $11
@@ -367,6 +368,7 @@ music_title_pulse_1_break_2:
 
 music_title_pulse_2:
 	current_octave_jump .SET 0
+	current_octave .SET 0
 	current_channel_transpose .SET 0
 	note_ads $C8
 	volume 10
@@ -582,6 +584,7 @@ music_title_pulse_2_loop_3:
 
 music_title_triangle:
 	current_octave_jump .SET 0
+	current_octave .SET 0
 	current_channel_transpose .SET 0
 	note_ads $FF
 	instrument 2
