@@ -190,7 +190,7 @@
 .ENDMACRO
 
 .MACRO noise_note b, c
-	.IF b > 0 && b < $10
+	.IF b >= 0 && b < $10
 		.IF c = 1
 			.BYTE b + 1 | $20
 		.ELSEIF c = 2
