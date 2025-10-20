@@ -7,4 +7,5 @@
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/needleman.asm"
 .INCLUDE "audio/music/magnetman.asm"
+.INCLUDE "audio/music/geminiman.asm"
 .INCBIN  "audio/audio.bin"
