@@ -24,7 +24,7 @@
 .ENDMACRO
 
 .MACRO channel_flags b
-	.IF b && channel_octave_jump_set
+	.IF b & channel_octave_jump_set
 		current_octave_jump .SET 1
 	.ELSE
 		current_octave_jump .SET 0
