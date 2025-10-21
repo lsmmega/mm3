@@ -43,8 +43,8 @@ audio := \
 	audio/music/*
 
 header := \
-	constants/* \
-	header.asm
+	header.asm \
+	constants/*
 
 home := \
 	home.asm \
