@@ -1,4 +1,4 @@
-;base note index set.
+;base note index set
 .ENUM
 	_E_1 ;non-standard note
 	_Gb1 ;non-standard note
@@ -98,7 +98,7 @@
 	B_7
 .ENDENUM
 
-;channel flags.
+;channel flags
 	no_channel_flags_set     = 0
 	channel_octave_jump_set  = 1 << 3
 	channel_triplet_note_set = 1 << 5

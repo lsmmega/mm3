@@ -5,7 +5,7 @@ music_geminiman:
 	.DBYT music_geminiman_triangle
 	.DBYT music_geminiman_noise
 
-;reset.
+;reset
 	current_global_transpose .SET 0
 
 music_geminiman_pulse_1:

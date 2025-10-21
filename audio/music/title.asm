@@ -5,7 +5,7 @@ music_title:
 	.DBYT music_title_triangle
 	.DBYT music_title_noise
 
-;reset.
+;reset
 	current_global_transpose .SET 0
 
 music_title_pulse_1:

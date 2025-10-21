@@ -5,7 +5,7 @@ music_needleman:
 	.DBYT music_needleman_triangle
 	.DBYT music_needleman_noise
 
-;reset.
+;reset
 	current_global_transpose .SET 0
 
 music_needleman_pulse_1:

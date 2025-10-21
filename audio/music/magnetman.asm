@@ -5,7 +5,7 @@ music_magnetman:
 	.DBYT music_magnetman_triangle
 	.DBYT music_magnetman_noise
 
-;reset.
+;reset
 	current_global_transpose .SET 0
 
 music_magnetman_pulse_1:
