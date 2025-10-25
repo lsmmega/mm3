@@ -15,4 +15,5 @@
 .INCLUDE "audio/music/shadowman.asm"
 .INCLUDE "audio/music/wily1_2.asm"
 .INCLUDE "audio/music/wily3_4.asm"
+.INCLUDE "audio/music/wily5_6.asm"
 .INCBIN  "audio/audio.bin"
