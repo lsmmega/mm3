@@ -17,3 +17,4 @@
 .INCLUDE "audio/music/wily3_4.asm"
 .INCLUDE "audio/music/wily5_6.asm"
 .INCBIN  "audio/audio.bin"
+.INCLUDE "audio/unused/unused.asm"
