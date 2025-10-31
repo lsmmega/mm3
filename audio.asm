@@ -18,5 +18,6 @@
 .INCLUDE "audio/music/wily5_6.asm"
 .INCLUDE "audio/music/boss_fighting.asm"
 .INCLUDE "audio/music/wily_boss_fighting.asm"
+.INCLUDE "audio/music/password.asm"
 .INCBIN  "audio/audio.bin"
 .INCLUDE "audio/unused/unused.asm"
