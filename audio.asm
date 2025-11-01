@@ -21,5 +21,6 @@
 .INCLUDE "audio/music/password.asm"
 .INCLUDE "audio/music/staff_roll.asm"
 .INCLUDE "audio/music/stage_select.asm"
+.INCLUDE "audio/music/protoman_whistle.asm"
 .INCBIN  "audio/audio.bin"
 .INCLUDE "audio/unused/unused.asm"
