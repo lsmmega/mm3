@@ -41,7 +41,7 @@
 .ENDMACRO
 
 .MACRO volume b
-	.IF b & $0F
+	.IF b >= 0 && b < 16
 		.BYTE $07, b
 	.ELSE
 		.ERROR "Invaild volume."
