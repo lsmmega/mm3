@@ -14,8 +14,7 @@ rom_obj := \
 	25.o \
 	26.o \
 	27.o \
-	28.o \
-	29.o
+	28.o
 
 cfg := \
 	mm3.cfg
@@ -104,10 +103,6 @@ stages := \
 	28.asm \
 	28/*
 
-29 := \
-	29.asm \
-	29/*
-
 _gfx := \
 	gfx/gfx.bmp gfx/gfx.chr
 
@@ -167,9 +162,6 @@ stages.o: $(stages)
 
 28.o: $(28)
 	ca65 28.asm
-
-29.o: $(29)
-	ca65 29.asm
 
 clean:
 	$(RM) $(rom_obj) \
