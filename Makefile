@@ -3,17 +3,13 @@ rom_obj := \
 	gfx.o \
 	header.o \
 	home.o \
+	sprites.o \
 	stages.o \
 	14.o \
 	16.o \
 	18.o \
 	19.o \
-	20.o \
-	21.o \
 	24.o \
-	25.o \
-	26.o \
-	27.o \
 	28.o
 
 cfg := \
@@ -38,6 +34,10 @@ header := \
 home := \
 	home.asm \
 	home/*
+
+sprites := \
+	sprites.asm \
+	sprites/*
 
 stages := \
 	stages.asm \
@@ -75,29 +75,9 @@ stages := \
 	19.asm \
 	19/*
 
-20:= \
-	20.asm \
-	20/*
-
-21 := \
-	21.asm \
-	21/*
-
 24 := \
 	24.asm \
 	24/*
-
-25 := \
-	25.asm \
-	25/*
-
-26 := \
-	26.asm \
-	26/*
-
-27 := \
-	27.asm \
-	27/*
 
 28 := \
 	28.asm \
@@ -127,6 +107,9 @@ header.o: $(header)
 home.o: $(home)
 	ca65 home.asm
 
+sprites.o: $(sprites)
+	ca65 sprites.asm
+
 stages.o: $(stages)
 	ca65 stages.asm
 
@@ -142,23 +125,8 @@ stages.o: $(stages)
 19.o: $(19)
 	ca65 19.asm
 
-20.o: $(20)
-	ca65 20.asm
-
-21.o: $(21)
-	ca65 21.asm
-
 24.o: $(24)
 	ca65 24.asm
-
-25.o: $(25)
-	ca65 25.asm
-
-26.o: $(26)
-	ca65 26.asm
-
-27.o: $(27)
-	ca65 27.asm
 
 28.o: $(28)
 	ca65 28.asm
