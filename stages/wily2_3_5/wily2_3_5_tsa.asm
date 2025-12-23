@@ -1,4 +1,4 @@
-	;     topleft, topright, bottomleft, bottomright
+;32x32, topleft, topright, bottomleft, bottomright
 	.BYTE $01, $02, $09, $08 ;00
 	.BYTE $0D, $15, $0D, $1D ;01
 	.BYTE $26, $27, $1E, $1F ;02
@@ -256,6 +256,7 @@
 	.BYTE $00, $00, $00, $00 ;FE
 	.BYTE $00, $00, $00, $00 ;FF
 
+;16x16
 ;topleft
 	.BYTE $00 ;00
 	.BYTE $01 ;01
