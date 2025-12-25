@@ -232,7 +232,7 @@
 	.ELSE
 		current_sfx_ads_set .SET 0
 	.ENDIF
-	.IF b & sfx_transpose_set
+	.IF b & sfx_global_transpose_set
 		current_sfx_global_transpose_set .SET 1
 	.ELSE
 		current_sfx_global_transpose_set .SET 0
