@@ -23,6 +23,7 @@
 .INCLUDE "audio/music/stage_select.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
 .INCLUDE "audio/music/ending.asm"
+.INCLUDE "audio/sfx/landing.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/boss_show.asm"
 .INCBIN  "audio/audio_2.bin"
