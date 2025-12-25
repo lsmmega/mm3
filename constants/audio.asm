@@ -103,3 +103,21 @@
 	channel_octave_jump_set  = 1 << 3
 	channel_triplet_note_set = 1 << 5
 	channel_connect_note_set = 1 << 6
+
+;sfx global channel flags
+	sfx_loop_set             = 1 << 0
+	sfx_ads_set              = 1 << 1
+	sfx_global_transpose_set = 1 << 2
+
+;sfx channel flags
+	sfx_pulse_1  = 1 << 0
+	sfx_pulse_2  = 1 << 1
+	sfx_triangle = 1 << 2
+	sfx_noise    = 1 << 3
+
+;sfx channel set flags
+	sfx_instruments_set = 1 << 0
+	sfx_duty_cycle_set  = 1 << 1
+	sfx_volume_set      = 1 << 2
+	sfx_pitch_slide_set = 1 << 3
+	sfx_pitch_tune_set  = 1 << 4

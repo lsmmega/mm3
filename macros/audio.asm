@@ -212,3 +212,145 @@
 		.ERROR "Note is out of bound."
 	.ENDIF
 .ENDMACRO
+
+.MACRO sfx_priority b
+	.IF b
+		.BYTE b
+	.ELSE
+		.ERROR "Non sfx."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_global_channel_flags b
+	.IF b & sfx_loop_set
+		current_sfx_loop_set .SET 1
+	.ELSE
+		current_sfx_loop_set .SET 0
+	.ENDIF
+	.IF b & sfx_ads_set
+		current_sfx_ads_set .SET 1
+	.ELSE
+		current_sfx_ads_set .SET 0
+	.ENDIF
+	.IF b & sfx_transpose_set
+		current_sfx_global_transpose_set .SET 1
+	.ELSE
+		current_sfx_global_transpose_set .SET 0
+	.ENDIF
+	.BYTE b
+.ENDMACRO
+
+.MACRO sfx_loop b, c
+	.IF current_sfx_loop_set
+		.BYTE b
+		.DBYT c
+	.ELSE
+		.ERROR "sfx loop is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_ads b
+	.IF current_sfx_ads_set
+		.BYTE b
+	.ELSE
+		.ERROR "sfx ads is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_global_transpose b
+	.IF current_sfx_global_transpose_set
+		current_sfx_global_transpose .SET b
+		.BYTE b
+	.ELSE
+		.ERROR "sfx global transpose is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_frames b
+	.BYTE b
+.ENDMACRO
+
+.MACRO sfx_channel_flags b
+	.IF b & sfx_instruments_set
+		current_sfx_instruments_set .SET 1
+	.ELSE
+		current_sfx_instruments_set .SET 0
+	.ENDIF
+	.IF b & sfx_duty_cycle_set
+		current_sfx_duty_cycle_set .SET 1
+	.ELSE
+		current_sfx_duty_cycle_set .SET 0
+	.ENDIF
+	.IF b & sfx_volume_set
+		current_sfx_volume_set .SET 1
+	.ELSE
+		current_sfx_volume_set .SET 0
+	.ENDIF
+	.IF b & sfx_pitch_slide_set
+		current_sfx_pitch_slide_set .SET 1
+	.ELSE
+		current_sfx_pitch_slide_set .SET 0
+	.ENDIF
+	.IF b & sfx_pitch_tune_set
+		current_sfx_pitch_tune_set .SET 1
+	.ELSE
+		current_sfx_pitch_tune_set .SET 0
+	.ENDIF
+	.BYTE b
+.ENDMACRO
+
+.MACRO sfx_instruments b
+	.IF current_sfx_instruments_set
+		.BYTE b
+	.ELSE
+		.ERROR "sfx instruments is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_duty_cycle b
+	.IF current_sfx_duty_cycle_set
+		.BYTE b << 6
+	.ELSE
+		.ERROR "sfx duty cycle is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_volume b
+	.IF current_sfx_volume_set
+		.IF b >= 0 && b < 16
+			.BYTE b
+		.ELSE
+			.ERROR "Invaild volume."
+		.ENDIF
+	.ELSE
+		.ERROR "sfx volume is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_pitch_slide b
+	.IF current_sfx_pitch_slide_set
+		.BYTE b
+	.ELSE
+		.ERROR "sfx pitch slide is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_pitch_tune b
+	.IF current_sfx_pitch_tune_set
+		.BYTE b
+	.ELSE
+		.ERROR "sfx pitch tune is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_note b
+	.BYTE b + 1 - current_sfx_global_transpose
+.ENDMACRO
+
+.MACRO sfx_noise_note b
+	.BYTE b + 1
+.ENDMACRO
+
+.MACRO sfx_end
+	.BYTE $FF
+.ENDMACRO
