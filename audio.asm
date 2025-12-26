@@ -38,6 +38,7 @@
 .INCLUDE "audio/sfx/jump_into_water.asm"
 .INCLUDE "audio/sfx/bikky.asm"
 .INCLUDE "audio/sfx/sfx_21.asm"
+.INCLUDE "audio/sfx/wanaan.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCLUDE "audio/music/boss_show.asm"
