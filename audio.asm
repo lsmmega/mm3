@@ -41,6 +41,7 @@
 .INCLUDE "audio/sfx/wanaan.asm"
 .INCLUDE "audio/sfx/appearing_block.asm"
 .INCLUDE "audio/sfx/nitron.asm"
+.INCLUDE "audio/sfx/bolton_and_nutton.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCLUDE "audio/music/boss_show.asm"
