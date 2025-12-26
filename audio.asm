@@ -36,7 +36,7 @@
 .INCLUDE "audio/sfx/door.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/boss_show.asm"
-.INCBIN  "audio/audio_2.bin"
+.INCLUDE "audio/sfx/teleport_out.asm"
 .INCLUDE "audio/music/get_weapon.asm"
 .INCLUDE "audio/music/wily_castle.asm"
 .INCLUDE "audio/music/wily_defeated.asm"
