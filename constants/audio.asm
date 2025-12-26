@@ -116,8 +116,9 @@
 	sfx_noise    = 1 << 3
 
 ;sfx channel set flags
-	sfx_instruments_set = 1 << 0
-	sfx_duty_cycle_set  = 1 << 1
-	sfx_volume_set      = 1 << 2
-	sfx_pitch_slide_set = 1 << 3
-	sfx_pitch_tune_set  = 1 << 4
+	sfx_instruments_set          = 1 << 0
+	sfx_duty_cycle_set           = 1 << 1
+	sfx_volume_set               = 1 << 2
+	sfx_triangle_note_length_set = 1 << 2
+	sfx_pitch_slide_set          = 1 << 3
+	sfx_pitch_tune_set           = 1 << 4

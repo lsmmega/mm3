@@ -286,6 +286,11 @@
 	.ELSE
 		current_sfx_volume_set .SET 0
 	.ENDIF
+	.IF b & sfx_triangle_note_length_set
+		current_sfx_triangle_note_length_set .SET 1
+	.ELSE
+		current_sfx_triangle_note_length_set .SET 0
+	.ENDIF
 	.IF b & sfx_pitch_slide_set
 		current_sfx_pitch_slide_set .SET 1
 	.ELSE
@@ -324,6 +329,14 @@
 		.ENDIF
 	.ELSE
 		.ERROR "sfx volume is not set."
+	.ENDIF
+.ENDMACRO
+
+.MACRO sfx_triangle_note_length b
+	.IF current_sfx_triangle_note_length_set
+		.BYTE b
+	.ELSE
+		.ERROR "sfx triangle note length is not set."
 	.ENDIF
 .ENDMACRO
 
