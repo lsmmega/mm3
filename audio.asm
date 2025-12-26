@@ -29,6 +29,7 @@
 .INCLUDE "audio/sfx/megaman_hit.asm"
 .INCLUDE "audio/sfx/death.asm"
 .INCLUDE "audio/sfx/enemy_hit.asm"
+.INCLUDE "audio/sfx/enemy_immune.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/boss_show.asm"
 .INCBIN  "audio/audio_2.bin"
