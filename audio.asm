@@ -32,6 +32,8 @@
 .INCLUDE "audio/sfx/enemy_immune.asm"
 .INCLUDE "audio/sfx/open_menu.asm"
 .INCLUDE "audio/sfx/select.asm"
+.INCLUDE "audio/sfx/refill.asm"
+.INCLUDE "audio/sfx/door.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/boss_show.asm"
 .INCBIN  "audio/audio_2.bin"
