@@ -44,6 +44,7 @@
 .INCLUDE "audio/sfx/bolton_and_nutton.asm"
 .INCLUDE "audio/sfx/elecn.asm"
 .INCLUDE "audio/sfx/explosion.asm"
+.INCLUDE "audio/sfx/wily_ufo.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCLUDE "audio/music/boss_show.asm"
