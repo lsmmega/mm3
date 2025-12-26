@@ -34,6 +34,7 @@
 .INCLUDE "audio/sfx/select.asm"
 .INCLUDE "audio/sfx/refill.asm"
 .INCLUDE "audio/sfx/door.asm"
+.INCLUDE "audio/sfx/cannon.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/boss_show.asm"
 .INCLUDE "audio/sfx/teleport_out.asm"
