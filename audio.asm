@@ -53,7 +53,7 @@
 .INCLUDE "audio/sfx/shadow_blade.asm"
 .INCLUDE "audio/sfx/sfx_2f.asm"
 .INCLUDE "audio/sfx/hardman_slam.asm"
-.INCBIN  "audio/audio_1.bin"
+.INCLUDE "audio/sfx/menu_fade_out.asm"
 .INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCLUDE "audio/music/boss_show.asm"
 .INCLUDE "audio/sfx/teleport_out.asm"
