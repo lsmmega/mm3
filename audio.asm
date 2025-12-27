@@ -49,6 +49,7 @@
 .INCLUDE "audio/sfx/magnet_missile.asm"
 .INCLUDE "audio/sfx/gemini_laser.asm"
 .INCLUDE "audio/sfx/top_spin.asm"
+.INCLUDE "audio/sfx/spark_shock.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCLUDE "audio/music/boss_show.asm"
