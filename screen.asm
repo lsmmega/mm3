@@ -1,8 +1,15 @@
 .SEGMENT "BANK0E"
+.INCLUDE "constants/tsa.asm"
 .INCBIN  "screen/14.bin"
+.INCLUDE "screen/wily_castle_scene_mapset.asm"
+.INCLUDE "screen/wily_castle_scene_tsa.asm"
 
 .SEGMENT "BANK10"
 .INCBIN  "screen/16.bin"
+.INCLUDE "screen/ending_get_weapon_scene_mapset.asm"
+.INCLUDE "screen/ending_get_weapon_scene_tsa.asm"
 
 .SEGMENT "BANK13"
 .INCBIN  "screen/19.bin"
+.INCLUDE "screen/title_stage_select_password_boss_show_scene_mapset.asm"
+.INCLUDE "screen/title_stage_select_password_boss_show_scene_tsa.asm"
