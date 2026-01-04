@@ -1,3 +1,7 @@
+.MACRO instrument_set b, c, d, e, f, g, h, i
+	.BYTE b, c, (d + $0F) << 4, e, f, g, h, i << 7
+.ENDMACRO
+
 .MACRO music_header
 	.BYTE $00
 .ENDMACRO

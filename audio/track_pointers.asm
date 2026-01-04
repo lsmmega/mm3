@@ -56,3 +56,4 @@ track_pointers:
 	.DBYT music_wily_castle
 	.DBYT music_wily_defeated
 	.DBYT music_boss_defeated
+track_pointers_end:
