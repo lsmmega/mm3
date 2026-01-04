@@ -37,7 +37,8 @@ home := \
 screen := \
 	screen.asm \
 	constants/* \
-	screen/*
+	screen/* \
+	screen/unused/*
 
 sprites := \
 	sprites.asm \
