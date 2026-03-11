@@ -1,11 +1,11 @@
 .SEGMENT "BANK16"
 .INCLUDE "constants/audio.asm"
+.INCLUDE "constants/mmc3.asm"
+.INCLUDE "constants/nes.asm"
 .INCLUDE "macros/audio.asm"
-.INCBIN  "audio/engine.bin"
-
-	.BYTE (track_pointers_end - track_pointers) / 2
-	.DBYT instrument_pointers
-
+.INCLUDE "ram/ram.asm"
+.INCLUDE "audio/engine.asm"
+.INCLUDE "audio/unused/unused_2ca2b.asm"
 .INCLUDE "audio/track_pointers.asm"
 .INCLUDE "audio/instruments.asm"
 .INCLUDE "audio/music/title.asm"
@@ -65,4 +65,4 @@
 .INCLUDE "audio/music/wily_castle.asm"
 .INCLUDE "audio/music/wily_defeated.asm"
 .INCLUDE "audio/music/boss_defeated.asm"
-.INCLUDE "audio/unused/unused.asm"
+.INCLUDE "audio/unused/unused_30e4c.asm"

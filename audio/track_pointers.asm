@@ -1,3 +1,9 @@
+no_of_track_pointers:
+	.BYTE (track_pointers_end - track_pointers) / 2
+
+instrument_pointers:
+	.DBYT instrument_table_pointers
+
 track_pointers:
 	.DBYT music_title
 	.DBYT music_needleman
