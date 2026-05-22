@@ -371,3 +371,13 @@
 .MACRO sfx_end
 	.BYTE $FF
 .ENDMACRO
+
+.MACRO music_queue b
+	LDA #b
+	JSR _music_queue
+.ENDMACRO
+
+.MACRO sfx_queue b
+	LDA #b
+	JSR _sfx_queue
+.ENDMACRO

@@ -1,3 +1,5 @@
+	z00                   = $00
+	z01                   = $01
 	zplayback_flag        = $C0
 	zaudio_C1             = $C1
 	zaudio_C2             = $C2
@@ -23,6 +25,10 @@
 	zsfx_loop             = $D6
 	zsfx_repeat           = $D7
 	zsfx_pitch_tune       = $D8
+	zmusic_queue          = $D9
+	zsfx_queue_index      = $DA
+	zsfx_queue_index_undo = $DB
+	zsfx_queue            = $DC
 
 	achannel_instrument        = $700
 	astats_adsr_state          = $704
