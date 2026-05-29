@@ -29,6 +29,13 @@
 	zsfx_queue_index      = $DA
 	zsfx_queue_index_undo = $DB
 	zsfx_queue            = $DC
+	zbank_select          = $F0
+	zbank_data_1          = $F2
+	zbank_data_2          = $F3
+	zbank_data_1_undo     = $F4
+	zbank_data_2_undo     = $F5
+	zbankswitching        = $F6
+	zaudio_bankswitching  = $F7
 
 	achannel_instrument        = $700
 	astats_adsr_state          = $704
