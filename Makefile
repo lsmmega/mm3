@@ -87,15 +87,15 @@ mm3: mm3.nes
 %.nes: $(rom_obj) $(cfg)
 	ld65 -C $(cfg) $(rom_obj) -o $@ -m $*.map
 
-main.o: $(audio) $(home)
-	ca65 main.asm
-
 gfx.o: $(gfx)
 	bmp2nes $(_gfx)
 	ca65 gfx.asm
 
 header.o: $(header)
 	ca65 header.asm
+
+main.o: $(audio) $(home)
+	ca65 main.asm
 
 screen.o: $(screen)
 	ca65 screen.asm
