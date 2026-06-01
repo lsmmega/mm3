@@ -22,11 +22,11 @@ _audio_bankswitch:
 	BNE @bankswitching
 	LDA #$06
 	STA bank_select
-	LDA #$16
+	LDA #<.BANK (_nmi_audio_processing)
 	STA bank_data
 	LDA #$07
 	STA bank_select
-	LDA #$17
+	LDA #<.BANK (_nmi_audio_processing) + 1
 	STA bank_data
 
 @loop:
