@@ -1,5 +1,9 @@
 	z00                   = $00
 	z01                   = $01
+	zjoy1_pressed_bits    = $14
+	zjoy2_pressed_bits    = $15
+	zjoy1_pressed         = $16
+	zjoy2_pressed         = $17
 	zplayback_flag        = $C0
 	zaudio_C1             = $C1
 	zaudio_C2             = $C2
