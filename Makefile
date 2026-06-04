@@ -33,6 +33,7 @@ header := \
 home := \
 	home.asm \
 	constants/* \
+	ram/* \
 	home/*
 
 screen := \
