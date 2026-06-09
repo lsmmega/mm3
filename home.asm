@@ -2,6 +2,7 @@
 .INCLUDE "constants/button.asm"
 .INCBIN  "home/home_1_1.bin"
 .INCLUDE "home/joy.asm"
+.INCLUDE "home/init_ppu.asm"
 .INCBIN  "home/home_1_2.bin"
 .INCLUDE "home/audio_queue.asm"
 .INCBIN  "home/home_2.bin"

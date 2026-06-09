@@ -1,9 +1,11 @@
 	z00                   = $00
 	z01                   = $01
+	z02                   = $02
 	zjoy1_pressed_bits    = $14
 	zjoy2_pressed_bits    = $15
 	zjoy1_pressed         = $16
 	zjoy2_pressed         = $17
+	zgot_weapon_flag      = $61
 	zplayback_flag        = $C0
 	zaudio_C1             = $C1
 	zaudio_C2             = $C2
@@ -40,6 +42,7 @@
 	zbank_data_2_undo     = $F5
 	zbankswitching        = $F6
 	zaudio_bankswitching  = $F7
+	zppu_ctrl             = $FF
 
 	achannel_instrument        = $700
 	astats_adsr_state          = $704
