@@ -14,6 +14,7 @@
 .INCLUDE "sprites/pointers/oam_sprites_pointers.asm"
 .INCBIN  "sprites/sprites_26_2.bin"
 .INCLUDE "sprites/oam_sprites.asm"
+.INCLUDE "unused/unused_35a9f.asm"
 .INCBIN  "sprites/sprites_26_3.bin"
 
 .SEGMENT "BANK1B"

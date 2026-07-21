@@ -46,7 +46,8 @@ sprites := \
 	constants/* \
 	sprites.asm \
 	sprites/* \
-	sprites/pointers/*
+	sprites/pointers/* \
+	unused/*
 
 stages := \
 	stages.asm \
