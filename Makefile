@@ -43,8 +43,10 @@ screen := \
 	screen/unused/*
 
 sprites := \
+	constants/* \
 	sprites.asm \
-	sprites/*
+	sprites/* \
+	sprites/pointers/*
 
 stages := \
 	stages.asm \
