@@ -17,6 +17,6 @@
 	no_y_flip = 0
 	y_flip    = 1 << 7
 
-;oam coord bit group
+;oam coord bits group
 	oam_coord_lower_bits = 0
 	oam_coord_upper_bits = 1 << 7
