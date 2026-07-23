@@ -1,6 +1,5 @@
 .SEGMENT "BANK14"
 .INCLUDE "constants/oam.asm"
-.INCLUDE "constants/oam_coord_bits.asm"
 .INCBIN  "sprites/sprites_20.bin"
 
 .SEGMENT "BANK15"

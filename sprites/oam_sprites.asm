@@ -2,7 +2,7 @@
 ;@start length, oamcoord index, oam set
 oam_sprites_00:
 oam_sprites_01:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $00
 
 @start:
@@ -19,7 +19,7 @@ oam_sprites_01:
 @end:
 
 oam_sprites_02:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $00
 
 @start:
@@ -36,7 +36,7 @@ oam_sprites_02:
 @end:
 
 oam_sprites_03:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $02
 
 @start:
@@ -52,7 +52,7 @@ oam_sprites_03:
 @end:
 
 oam_sprites_04:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $04
 
 @start:
@@ -66,7 +66,7 @@ oam_sprites_04:
 @end:
 
 oam_sprites_05:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1E
 
 @start:
@@ -80,7 +80,7 @@ oam_sprites_05:
 @end:
 
 oam_sprites_06:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1E
 
 @start:
@@ -92,7 +92,7 @@ oam_sprites_06:
 @end:
 
 oam_sprites_07:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $00
 
 @start:
@@ -109,7 +109,7 @@ oam_sprites_07:
 @end:
 
 oam_sprites_08:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $00
 
 @start:
@@ -125,7 +125,7 @@ oam_sprites_08:
 @end:
 
 oam_sprites_09:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $08
 
 @start:
@@ -140,7 +140,7 @@ oam_sprites_09:
 @end:
 
 oam_sprites_0a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0A
 
 @start:
@@ -156,7 +156,7 @@ oam_sprites_0a:
 @end:
 
 oam_sprites_0b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0A
 
 @start:
@@ -172,7 +172,7 @@ oam_sprites_0b:
 @end:
 
 oam_sprites_0c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0A
 
 @start:
@@ -188,7 +188,7 @@ oam_sprites_0c:
 @end:
 
 oam_sprites_0d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0C
 
 @start:
@@ -206,7 +206,7 @@ oam_sprites_0d:
 @end:
 
 oam_sprites_0e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -222,7 +222,7 @@ oam_sprites_0e:
 @end:
 
 oam_sprites_0f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $10
 
 @start:
@@ -240,7 +240,7 @@ oam_sprites_0f:
 @end:
 
 oam_sprites_10:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $12
 
 @start:
@@ -257,7 +257,7 @@ oam_sprites_10:
 @end:
 
 oam_sprites_11:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $14
 
 @start:
@@ -275,7 +275,7 @@ oam_sprites_11:
 @end:
 
 oam_sprites_12:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $16
 
 @start:
@@ -286,7 +286,7 @@ oam_sprites_12:
 @end:
 
 oam_sprites_13:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -303,7 +303,7 @@ oam_sprites_13:
 @end:
 
 oam_sprites_14:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -314,7 +314,7 @@ oam_sprites_14:
 @end:
 
 oam_sprites_15:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1A
 
 @start:
@@ -324,7 +324,7 @@ oam_sprites_15:
 @end:
 
 oam_sprites_16:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1A
 
 @start:
@@ -334,7 +334,7 @@ oam_sprites_16:
 @end:
 
 oam_sprites_17:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1A
 
 @start:
@@ -344,7 +344,7 @@ oam_sprites_17:
 @end:
 
 oam_sprites_18:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1C
 
 @start:
@@ -362,7 +362,7 @@ oam_sprites_18:
 @end:
 
 oam_sprites_19:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1E
 
 @start:
@@ -378,7 +378,7 @@ oam_sprites_19:
 @end:
 
 oam_sprites_1a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $1E
 
 @start:
@@ -394,7 +394,7 @@ oam_sprites_1a:
 @end:
 
 oam_sprites_1b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $20
 
 @start:
@@ -412,7 +412,7 @@ oam_sprites_1b:
 @end:
 
 oam_sprites_1c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $22
 
 @start:
@@ -420,7 +420,7 @@ oam_sprites_1c:
 @end:
 
 oam_sprites_1d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $22
 
 @start:
@@ -428,7 +428,7 @@ oam_sprites_1d:
 @end:
 
 oam_sprites_1e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $22
 
 @start:
@@ -436,7 +436,7 @@ oam_sprites_1e:
 @end:
 
 oam_sprites_1f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $14
 
 @start:
@@ -454,7 +454,7 @@ oam_sprites_1f:
 @end:
 
 oam_sprites_20:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -462,7 +462,7 @@ oam_sprites_20:
 @end:
 
 oam_sprites_21:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -473,7 +473,7 @@ oam_sprites_21:
 @end:
 
 oam_sprites_22:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $24
 
 @start:
@@ -540,7 +540,7 @@ oam_sprites_22:
 @end:
 
 oam_sprites_23:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $25
 
 @start:
@@ -607,7 +607,7 @@ oam_sprites_23:
 @end:
 
 oam_sprites_24:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -615,7 +615,7 @@ oam_sprites_24:
 @end:
 
 oam_sprites_25:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -630,7 +630,7 @@ oam_sprites_25:
 @end:
 
 oam_sprites_26:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $9A
 
 @start:
@@ -644,7 +644,7 @@ oam_sprites_26:
 @end:
 
 oam_sprites_27:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $22
 
 @start:
@@ -656,7 +656,7 @@ oam_sprites_27:
 @end:
 
 oam_sprites_28:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $22
 
 @start:
@@ -668,7 +668,7 @@ oam_sprites_28:
 @end:
 
 oam_sprites_29:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $30
 
 @start:
@@ -682,7 +682,7 @@ oam_sprites_29:
 @end:
 
 oam_sprites_2a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $32
 
 @start:
@@ -697,7 +697,7 @@ oam_sprites_2a:
 @end:
 
 oam_sprites_2b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $34
 
 @start:
@@ -712,7 +712,7 @@ oam_sprites_2b:
 @end:
 
 oam_sprites_2c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $22
 
 @start:
@@ -726,7 +726,7 @@ oam_sprites_2c:
 @end:
 
 oam_sprites_2d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $30
 
 @start:
@@ -742,7 +742,7 @@ oam_sprites_2d:
 @end:
 
 oam_sprites_2e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $30
 
 @start:
@@ -758,7 +758,7 @@ oam_sprites_2e:
 @end:
 
 oam_sprites_2f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $30
 
 @start:
@@ -772,7 +772,7 @@ oam_sprites_2f:
 @end:
 
 oam_sprites_30:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $30
 
 @start:
@@ -786,7 +786,7 @@ oam_sprites_30:
 @end:
 
 oam_sprites_31:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $30
 
 @start:
@@ -800,7 +800,7 @@ oam_sprites_31:
 @end:
 
 oam_sprites_32:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $EE
 
 @start:
@@ -813,7 +813,7 @@ oam_sprites_32:
 @end:
 
 oam_sprites_33:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $EE
 
 @start:
@@ -826,7 +826,7 @@ oam_sprites_33:
 @end:
 
 oam_sprites_34:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $EE
 
 @start:
@@ -839,7 +839,7 @@ oam_sprites_34:
 @end:
 
 oam_sprites_35:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -855,7 +855,7 @@ oam_sprites_35:
 @end:
 
 oam_sprites_36:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $38
 
 @start:
@@ -871,7 +871,7 @@ oam_sprites_36:
 @end:
 
 oam_sprites_37:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $38
 
 @start:
@@ -887,7 +887,7 @@ oam_sprites_37:
 @end:
 
 oam_sprites_38:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -903,7 +903,7 @@ oam_sprites_38:
 @end:
 
 oam_sprites_39:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -916,7 +916,7 @@ oam_sprites_39:
 @end:
 
 oam_sprites_3a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -929,7 +929,7 @@ oam_sprites_3a:
 @end:
 
 oam_sprites_3b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -942,7 +942,7 @@ oam_sprites_3b:
 @end:
 
 oam_sprites_3c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -955,7 +955,7 @@ oam_sprites_3c:
 @end:
 
 oam_sprites_3d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -966,7 +966,7 @@ oam_sprites_3d:
 @end:
 
 oam_sprites_3e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -977,7 +977,7 @@ oam_sprites_3e:
 @end:
 
 oam_sprites_3f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -994,7 +994,7 @@ oam_sprites_3f:
 @end:
 
 oam_sprites_40:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1011,7 +1011,7 @@ oam_sprites_40:
 @end:
 
 oam_sprites_41:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2E
 
 @start:
@@ -1028,7 +1028,7 @@ oam_sprites_41:
 @end:
 
 oam_sprites_42:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $40
 
 @start:
@@ -1052,7 +1052,7 @@ oam_sprites_42:
 @end:
 
 oam_sprites_43:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3C
 
 @start:
@@ -1077,7 +1077,7 @@ oam_sprites_43:
 @end:
 
 oam_sprites_44:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $42
 
 @start:
@@ -1103,7 +1103,7 @@ oam_sprites_44:
 @end:
 
 oam_sprites_45:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $44
 
 @start:
@@ -1125,7 +1125,7 @@ oam_sprites_45:
 @end:
 
 oam_sprites_46:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $42
 
 @start:
@@ -1152,7 +1152,7 @@ oam_sprites_46:
 @end:
 
 oam_sprites_47:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $44
 
 @start:
@@ -1175,7 +1175,7 @@ oam_sprites_47:
 @end:
 
 oam_sprites_48:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $46
 
 @start:
@@ -1194,7 +1194,7 @@ oam_sprites_48:
 @end:
 
 oam_sprites_49:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $18
 
 @start:
@@ -1205,7 +1205,7 @@ oam_sprites_49:
 @end:
 
 oam_sprites_4a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $06
 
 @start:
@@ -1216,7 +1216,7 @@ oam_sprites_4a:
 @end:
 
 oam_sprites_4b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1233,7 +1233,7 @@ oam_sprites_4b:
 @end:
 
 oam_sprites_4c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1250,7 +1250,7 @@ oam_sprites_4c:
 @end:
 
 oam_sprites_4d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2E
 
 @start:
@@ -1267,7 +1267,7 @@ oam_sprites_4d:
 @end:
 
 oam_sprites_4e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1280,7 +1280,7 @@ oam_sprites_4e:
 @end:
 
 oam_sprites_4f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1293,7 +1293,7 @@ oam_sprites_4f:
 @end:
 
 oam_sprites_50:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3A
 
 @start:
@@ -1308,7 +1308,7 @@ oam_sprites_50:
 @end:
 
 oam_sprites_51:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $48
 
 @start:
@@ -1324,7 +1324,7 @@ oam_sprites_51:
 @end:
 
 oam_sprites_52:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $EE
 
 @start:
@@ -1337,7 +1337,7 @@ oam_sprites_52:
 @end:
 
 oam_sprites_53:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $EE
 
 @start:
@@ -1350,7 +1350,7 @@ oam_sprites_53:
 @end:
 
 oam_sprites_54:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1361,7 +1361,7 @@ oam_sprites_54:
 @end:
 
 oam_sprites_55:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1372,7 +1372,7 @@ oam_sprites_55:
 @end:
 
 oam_sprites_56:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1383,7 +1383,7 @@ oam_sprites_56:
 @end:
 
 oam_sprites_57:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1394,7 +1394,7 @@ oam_sprites_57:
 @end:
 
 oam_sprites_58:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1405,7 +1405,7 @@ oam_sprites_58:
 @end:
 
 oam_sprites_59:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1416,7 +1416,7 @@ oam_sprites_59:
 @end:
 
 oam_sprites_5a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1429,7 +1429,7 @@ oam_sprites_5a:
 @end:
 
 oam_sprites_5b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1442,7 +1442,7 @@ oam_sprites_5b:
 @end:
 
 oam_sprites_5c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1455,7 +1455,7 @@ oam_sprites_5c:
 @end:
 
 oam_sprites_5d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1468,7 +1468,7 @@ oam_sprites_5d:
 @end:
 
 oam_sprites_5e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1481,7 +1481,7 @@ oam_sprites_5e:
 @end:
 
 oam_sprites_5f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1494,7 +1494,7 @@ oam_sprites_5f:
 @end:
 
 oam_sprites_60:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -1507,7 +1507,7 @@ oam_sprites_60:
 @end:
 
 oam_sprites_61:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $4C
 
 @start:
@@ -1542,7 +1542,7 @@ oam_sprites_61:
 @end:
 
 oam_sprites_62:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $4E
 
 @start:
@@ -1577,7 +1577,7 @@ oam_sprites_62:
 @end:
 
 oam_sprites_63:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -1627,7 +1627,7 @@ oam_sprites_63:
 @end:
 
 oam_sprites_64:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -1650,7 +1650,7 @@ oam_sprites_64:
 @end:
 
 oam_sprites_65:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $5A
 
 @start:
@@ -1670,7 +1670,7 @@ oam_sprites_65:
 
 oam_sprites_66:
 oam_sprites_67:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -1691,7 +1691,7 @@ oam_sprites_67:
 @end:
 
 oam_sprites_68:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -1712,7 +1712,7 @@ oam_sprites_68:
 @end:
 
 oam_sprites_69:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -1733,7 +1733,7 @@ oam_sprites_69:
 @end:
 
 oam_sprites_6a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -1754,7 +1754,7 @@ oam_sprites_6a:
 @end:
 
 oam_sprites_6b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -1765,7 +1765,7 @@ oam_sprites_6b:
 @end:
 
 oam_sprites_6c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -1784,7 +1784,7 @@ oam_sprites_6c:
 @end:
 
 oam_sprites_6d:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $02
 
 @start:
@@ -1800,7 +1800,7 @@ oam_sprites_6d:
 @end:
 
 oam_sprites_6e:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $16
 
 @start:
@@ -1810,7 +1810,7 @@ oam_sprites_6e:
 @end:
 
 oam_sprites_6f:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $18
 
 @start:
@@ -1819,7 +1819,7 @@ oam_sprites_6f:
 @end:
 
 oam_sprites_70:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $A4
 
 @start:
@@ -1827,7 +1827,7 @@ oam_sprites_70:
 @end:
 
 oam_sprites_71:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2A
 
 @start:
@@ -1854,7 +1854,7 @@ oam_sprites_71:
 @end:
 
 oam_sprites_72:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $58
 
 @start:
@@ -1882,7 +1882,7 @@ oam_sprites_72:
 @end:
 
 oam_sprites_73:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $84
 
 @start:
@@ -1904,7 +1904,7 @@ oam_sprites_73:
 @end:
 
 oam_sprites_74:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -1912,7 +1912,7 @@ oam_sprites_74:
 @end:
 
 oam_sprites_75:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -1920,7 +1920,7 @@ oam_sprites_75:
 @end:
 
 oam_sprites_76:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $02
 
 @start:
@@ -1936,7 +1936,7 @@ oam_sprites_76:
 @end:
 
 oam_sprites_77:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -1944,7 +1944,7 @@ oam_sprites_77:
 @end:
 
 oam_sprites_78:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -1952,7 +1952,7 @@ oam_sprites_78:
 @end:
 
 oam_sprites_79:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $5C
 
 @start:
@@ -1971,7 +1971,7 @@ oam_sprites_79:
 @end:
 
 oam_sprites_7a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $5C
 
 @start:
@@ -1991,7 +1991,7 @@ oam_sprites_7a:
 @end:
 
 oam_sprites_7b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $5E
 
 @start:
@@ -2010,7 +2010,7 @@ oam_sprites_7b:
 @end:
 
 oam_sprites_7c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -2021,7 +2021,7 @@ oam_sprites_7c:
 @end:
 
 oam_sprites_7d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -2044,7 +2044,7 @@ oam_sprites_7d:
 @end:
 
 oam_sprites_7e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -2067,7 +2067,7 @@ oam_sprites_7e:
 @end:
 
 oam_sprites_7f:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $20
 
 @start:
@@ -2091,7 +2091,7 @@ oam_sprites_7f:
 @end:
 
 oam_sprites_80:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -2102,7 +2102,7 @@ oam_sprites_80:
 @end:
 
 oam_sprites_81:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -2113,7 +2113,7 @@ oam_sprites_81:
 @end:
 
 oam_sprites_82:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -2130,7 +2130,7 @@ oam_sprites_82:
 @end:
 
 oam_sprites_83:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -2143,7 +2143,7 @@ oam_sprites_83:
 @end:
 
 oam_sprites_84:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $62
 
 @start:
@@ -2165,7 +2165,7 @@ oam_sprites_84:
 @end:
 
 oam_sprites_85:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $64
 
 @start:
@@ -2187,7 +2187,7 @@ oam_sprites_85:
 @end:
 
 oam_sprites_86:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $66
 
 @start:
@@ -2212,7 +2212,7 @@ oam_sprites_86:
 @end:
 
 oam_sprites_87:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $68
 
 @start:
@@ -2238,7 +2238,7 @@ oam_sprites_87:
 @end:
 
 oam_sprites_88:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6A
 
 @start:
@@ -2265,7 +2265,7 @@ oam_sprites_88:
 @end:
 
 oam_sprites_89:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6C
 
 @start:
@@ -2288,7 +2288,7 @@ oam_sprites_89:
 @end:
 
 oam_sprites_8a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $40
 
 @start:
@@ -2313,7 +2313,7 @@ oam_sprites_8a:
 @end:
 
 oam_sprites_8b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3C
 
 @start:
@@ -2339,7 +2339,7 @@ oam_sprites_8b:
 @end:
 
 oam_sprites_8c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $42
 
 @start:
@@ -2366,7 +2366,7 @@ oam_sprites_8c:
 @end:
 
 oam_sprites_8d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6E
 
 @start:
@@ -2381,7 +2381,7 @@ oam_sprites_8d:
 @end:
 
 oam_sprites_8e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6E
 
 @start:
@@ -2396,7 +2396,7 @@ oam_sprites_8e:
 @end:
 
 oam_sprites_8f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6E
 
 @start:
@@ -2411,7 +2411,7 @@ oam_sprites_8f:
 @end:
 
 oam_sprites_90:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6E
 
 @start:
@@ -2426,7 +2426,7 @@ oam_sprites_90:
 @end:
 
 oam_sprites_91:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $70
 
 @start:
@@ -2445,7 +2445,7 @@ oam_sprites_91:
 @end:
 
 oam_sprites_92:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $70
 
 @start:
@@ -2464,7 +2464,7 @@ oam_sprites_92:
 @end:
 
 oam_sprites_93:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -2477,7 +2477,7 @@ oam_sprites_93:
 @end:
 
 oam_sprites_94:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -2490,7 +2490,7 @@ oam_sprites_94:
 @end:
 
 oam_sprites_95:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $72
 
 @start:
@@ -2504,7 +2504,7 @@ oam_sprites_95:
 @end:
 
 oam_sprites_96:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $72
 
 @start:
@@ -2518,7 +2518,7 @@ oam_sprites_96:
 @end:
 
 oam_sprites_97:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $E0
 
 @start:
@@ -2534,7 +2534,7 @@ oam_sprites_97:
 @end:
 
 oam_sprites_98:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $E0
 
 @start:
@@ -2550,7 +2550,7 @@ oam_sprites_98:
 @end:
 
 oam_sprites_99:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $E0
 
 @start:
@@ -2566,7 +2566,7 @@ oam_sprites_99:
 @end:
 
 oam_sprites_9a:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -2577,7 +2577,7 @@ oam_sprites_9a:
 @end:
 
 oam_sprites_9b:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6C
 
 @start:
@@ -2592,7 +2592,7 @@ oam_sprites_9b:
 @end:
 
 oam_sprites_9c:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $76
 
 @start:
@@ -2604,7 +2604,7 @@ oam_sprites_9c:
 @end:
 
 oam_sprites_9d:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -2615,7 +2615,7 @@ oam_sprites_9d:
 @end:
 
 oam_sprites_9e:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $78
 
 @start:
@@ -2629,7 +2629,7 @@ oam_sprites_9e:
 @end:
 
 oam_sprites_9f:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $36
 
 @start:
@@ -2642,7 +2642,7 @@ oam_sprites_9f:
 @end:
 
 oam_sprites_a0:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $50
 
 @start:
@@ -2655,7 +2655,7 @@ oam_sprites_a0:
 @end:
 
 oam_sprites_a1:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $50
 
 @start:
@@ -2668,7 +2668,7 @@ oam_sprites_a1:
 @end:
 
 oam_sprites_a2:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $40
 
 @start:
@@ -2684,7 +2684,7 @@ oam_sprites_a2:
 @end:
 
 oam_sprites_a3:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $88
 
 @start:
@@ -2699,7 +2699,7 @@ oam_sprites_a3:
 @end:
 
 oam_sprites_a4:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $82
 
 @start:
@@ -2715,7 +2715,7 @@ oam_sprites_a4:
 @end:
 
 oam_sprites_a5:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $7C
 
 @start:
@@ -2731,7 +2731,7 @@ oam_sprites_a5:
 @end:
 
 oam_sprites_a6:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $7C
 
 @start:
@@ -2747,7 +2747,7 @@ oam_sprites_a6:
 @end:
 
 oam_sprites_a7:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $7E
 
 @start:
@@ -2763,7 +2763,7 @@ oam_sprites_a7:
 @end:
 
 oam_sprites_a8:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $80
 
 @start:
@@ -2779,7 +2779,7 @@ oam_sprites_a8:
 @end:
 
 oam_sprites_a9:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $7C
 
 @start:
@@ -2797,7 +2797,7 @@ oam_sprites_a9:
 @end:
 
 oam_sprites_aa:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $7C
 
 @start:
@@ -2814,7 +2814,7 @@ oam_sprites_aa:
 @end:
 
 oam_sprites_ab:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $A5
 
 @start:
@@ -2824,7 +2824,7 @@ oam_sprites_ab:
 oam_sprites_ac:
 oam_sprites_ad:
 oam_sprites_ae:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -2845,7 +2845,7 @@ oam_sprites_ae:
 @end:
 
 oam_sprites_af:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -2864,7 +2864,7 @@ oam_sprites_af:
 @end:
 
 oam_sprites_b0:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -2885,7 +2885,7 @@ oam_sprites_b0:
 @end:
 
 oam_sprites_b1:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -2909,7 +2909,7 @@ oam_sprites_b1:
 @end:
 
 oam_sprites_b2:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -2917,7 +2917,7 @@ oam_sprites_b2:
 @end:
 
 oam_sprites_b3:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -2925,7 +2925,7 @@ oam_sprites_b3:
 @end:
 
 oam_sprites_b4:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $50
 
 @start:
@@ -2944,7 +2944,7 @@ oam_sprites_b4:
 @end:
 
 oam_sprites_b5:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $50
 
 @start:
@@ -2963,7 +2963,7 @@ oam_sprites_b5:
 @end:
 
 oam_sprites_b6:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C6
 
 @start:
@@ -2978,7 +2978,7 @@ oam_sprites_b6:
 @end:
 
 oam_sprites_b7:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $9D
 
 @start:
@@ -2995,7 +2995,7 @@ oam_sprites_b7:
 @end:
 
 oam_sprites_b8:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B2
 
 @start:
@@ -3018,7 +3018,7 @@ oam_sprites_b8:
 @end:
 
 oam_sprites_b9:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B2
 
 @start:
@@ -3041,7 +3041,7 @@ oam_sprites_b9:
 @end:
 
 oam_sprites_ba:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $8C
 
 @start:
@@ -3064,7 +3064,7 @@ oam_sprites_ba:
 @end:
 
 oam_sprites_bb:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $91
 
 @start:
@@ -3093,7 +3093,7 @@ oam_sprites_bb:
 @end:
 
 oam_sprites_bc:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $91
 
 @start:
@@ -3122,7 +3122,7 @@ oam_sprites_bc:
 @end:
 
 oam_sprites_bd:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $91
 
 @start:
@@ -3151,7 +3151,7 @@ oam_sprites_bd:
 @end:
 
 oam_sprites_be:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $90
 
 @start:
@@ -3186,7 +3186,7 @@ oam_sprites_be:
 @end:
 
 oam_sprites_bf:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $90
 
 @start:
@@ -3221,7 +3221,7 @@ oam_sprites_bf:
 @end:
 
 oam_sprites_c0:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $8D
 
 @start:
@@ -3236,7 +3236,7 @@ oam_sprites_c0:
 @end:
 
 oam_sprites_c1:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $8D
 
 @start:
@@ -3255,7 +3255,7 @@ oam_sprites_c1:
 @end:
 
 oam_sprites_c2:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $8F
 
 @start:
@@ -3267,7 +3267,7 @@ oam_sprites_c2:
 @end:
 
 oam_sprites_c3:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $8F
 
 @start:
@@ -3279,7 +3279,7 @@ oam_sprites_c3:
 @end:
 
 oam_sprites_c4:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $40
 
 @start:
@@ -3288,7 +3288,7 @@ oam_sprites_c4:
 @end:
 
 oam_sprites_c5:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $40
 
 @start:
@@ -3297,7 +3297,7 @@ oam_sprites_c5:
 @end:
 
 oam_sprites_c6:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $98
 
 @start:
@@ -3313,7 +3313,7 @@ oam_sprites_c6:
 @end:
 
 oam_sprites_c7:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $99
 
 @start:
@@ -3328,7 +3328,7 @@ oam_sprites_c7:
 @end:
 
 oam_sprites_c8:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $98
 
 @start:
@@ -3345,7 +3345,7 @@ oam_sprites_c8:
 @end:
 
 oam_sprites_c9:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -3377,7 +3377,7 @@ oam_sprites_c9:
 @end:
 
 oam_sprites_ca:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -3409,7 +3409,7 @@ oam_sprites_ca:
 @end:
 
 oam_sprites_cb:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -3441,7 +3441,7 @@ oam_sprites_cb:
 @end:
 
 oam_sprites_cc:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $9C
 
 @start:
@@ -3449,7 +3449,7 @@ oam_sprites_cc:
 @end:
 
 oam_sprites_cd:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6A
 
 @start:
@@ -3466,7 +3466,7 @@ oam_sprites_cd:
 @end:
 
 oam_sprites_ce:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6A
 
 @start:
@@ -3483,7 +3483,7 @@ oam_sprites_ce:
 @end:
 
 oam_sprites_cf:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -3498,7 +3498,7 @@ oam_sprites_d4:
 oam_sprites_d5:
 oam_sprites_d6:
 oam_sprites_d7:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $60
 
 @start:
@@ -3513,7 +3513,7 @@ oam_sprites_d7:
 @end:
 
 oam_sprites_d8:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $6C
 
 @start:
@@ -3526,7 +3526,7 @@ oam_sprites_d8:
 @end:
 
 oam_sprites_d9:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $76
 
 @start:
@@ -3537,7 +3537,7 @@ oam_sprites_d9:
 @end:
 
 oam_sprites_da:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $A8
 
 @start:
@@ -3553,7 +3553,7 @@ oam_sprites_da:
 @end:
 
 oam_sprites_db:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $AA
 
 @start:
@@ -3569,7 +3569,7 @@ oam_sprites_db:
 @end:
 
 oam_sprites_dc:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $AC
 
 @start:
@@ -3586,7 +3586,7 @@ oam_sprites_dc:
 @end:
 
 oam_sprites_dd:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $AE
 
 @start:
@@ -3604,7 +3604,7 @@ oam_sprites_dd:
 @end:
 
 oam_sprites_de:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B0
 
 @start:
@@ -3626,7 +3626,7 @@ oam_sprites_de:
 @end:
 
 oam_sprites_df:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B2
 
 @start:
@@ -3645,7 +3645,7 @@ oam_sprites_df:
 @end:
 
 oam_sprites_e0:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B4
 
 @start:
@@ -3664,7 +3664,7 @@ oam_sprites_e0:
 @end:
 
 oam_sprites_e1:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B6
 
 @start:
@@ -3683,7 +3683,7 @@ oam_sprites_e1:
 @end:
 
 oam_sprites_e2:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B8
 
 @start:
@@ -3702,7 +3702,7 @@ oam_sprites_e2:
 @end:
 
 oam_sprites_e3:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $B4
 
 @start:
@@ -3715,7 +3715,7 @@ oam_sprites_e3:
 @end:
 
 oam_sprites_e4:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $BA
 
 @start:
@@ -3729,7 +3729,7 @@ oam_sprites_e4:
 @end:
 
 oam_sprites_e5:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $AA
 
 @start:
@@ -3743,7 +3743,7 @@ oam_sprites_e5:
 @end:
 
 oam_sprites_e6:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $BC
 
 @start:
@@ -3758,7 +3758,7 @@ oam_sprites_e6:
 @end:
 
 oam_sprites_e7:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -3777,7 +3777,7 @@ oam_sprites_e7:
 @end:
 
 oam_sprites_e8:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -3796,7 +3796,7 @@ oam_sprites_e8:
 @end:
 
 oam_sprites_e9:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -3815,7 +3815,7 @@ oam_sprites_e9:
 @end:
 
 oam_sprites_ea:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -3836,7 +3836,7 @@ oam_sprites_ea:
 @end:
 
 oam_sprites_eb:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $C0
 
 @start:
@@ -3855,7 +3855,7 @@ oam_sprites_eb:
 @end:
 
 oam_sprites_ec:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -3866,7 +3866,7 @@ oam_sprites_ec:
 @end:
 
 oam_sprites_ed:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $2E
 
 @start:
@@ -3883,7 +3883,7 @@ oam_sprites_ed:
 @end:
 
 oam_sprites_ee:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $2E
 
 @start:
@@ -3900,7 +3900,7 @@ oam_sprites_ee:
 @end:
 
 oam_sprites_ef:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -3916,7 +3916,7 @@ oam_sprites_ef:
 @end:
 
 oam_sprites_f0:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -3927,7 +3927,7 @@ oam_sprites_f0:
 @end:
 
 oam_sprites_f1:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -3938,7 +3938,7 @@ oam_sprites_f1:
 @end:
 
 oam_sprites_f2:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $3E
 
 @start:
@@ -3949,7 +3949,7 @@ oam_sprites_f2:
 @end:
 
 oam_sprites_f3:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -3957,7 +3957,7 @@ oam_sprites_f3:
 @end:
 
 oam_sprites_f4:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -3965,7 +3965,7 @@ oam_sprites_f4:
 @end:
 
 oam_sprites_f5:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $96
 
 @start:
@@ -4011,7 +4011,7 @@ oam_sprites_f5:
 @end:
 
 oam_sprites_f6:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $86
 
 @start:
@@ -4058,7 +4058,7 @@ oam_sprites_f6:
 @end:
 
 oam_sprites_f7:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $96
 
 @start:
@@ -4104,7 +4104,7 @@ oam_sprites_f7:
 @end:
 
 oam_sprites_f8:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $0E
 
 @start:
@@ -4112,7 +4112,7 @@ oam_sprites_f8:
 @end:
 
 oam_sprites_f9:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -4123,7 +4123,7 @@ oam_sprites_f9:
 @end:
 
 oam_sprites_fa:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -4134,7 +4134,7 @@ oam_sprites_fa:
 @end:
 
 oam_sprites_fb:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $2C
 
 @start:
@@ -4145,7 +4145,7 @@ oam_sprites_fb:
 @end:
 
 oam_sprites_fc:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $26
 
 @start:
@@ -4158,7 +4158,7 @@ oam_sprites_fc:
 @end:
 
 oam_sprites_fd:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $26
 
 @start:
@@ -4169,7 +4169,7 @@ oam_sprites_fd:
 @end:
 
 oam_sprites_fe:
-	.BYTE (@end - @start) / 2 - 1 | upper_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_upper_bits
 	.BYTE $A8
 
 @start:
@@ -4182,7 +4182,7 @@ oam_sprites_fe:
 @end:
 
 oam_sprites_ff:
-	.BYTE (@end - @start) / 2 - 1 | lower_oam_coord
+	.BYTE (@end - @start) / 2 - 1 | oam_coord_lower_bits
 	.BYTE $98
 
 @start:
