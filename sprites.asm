@@ -1,12 +1,17 @@
+	.FEATURE FORCE_RANGE
 .SEGMENT "BANK14"
 .INCLUDE "constants/oam.asm"
-.INCBIN  "sprites/sprites_20.bin"
+.INCLUDE "sprites/oamcoord_2.asm"
+.INCLUDE "unused/unused_2935a.asm"
+.INCLUDE "sprites/pointers/oamcoord_pointers_2.asm"
 
 .SEGMENT "BANK15"
 .INCBIN  "sprites/sprites_21.bin"
 
 .SEGMENT "BANK19"
-.INCBIN  "sprites/sprites_25.bin"
+.INCLUDE "sprites/oamcoord_1.asm"
+.INCLUDE "unused/unused_33954.asm"
+.INCLUDE "sprites/pointers/oamcoord_pointers_1.asm"
 
 .SEGMENT "BANK1A"
 .INCLUDE "sprites/pointers/oam_frameset_pointers.asm"
