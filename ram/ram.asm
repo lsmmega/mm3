@@ -41,6 +41,7 @@
 	zsfx_queue_index      = $DA
 	zsfx_queue_index_undo = $DB
 	zsfx_queue            = $DC
+	zrender_flag          = $EE
 	zbank_select          = $F0
 	zbank_data_1          = $F2
 	zbank_data_2          = $F3
@@ -48,6 +49,7 @@
 	zbank_data_2_undo     = $F5
 	zbankswitching        = $F6
 	zaudio_bankswitching  = $F7
+	zppu_mask             = $FE
 	zppu_ctrl             = $FF
 
 	achannel_instrument        = $700

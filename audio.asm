@@ -1,7 +1,6 @@
 .SEGMENT "BANK16"
 .INCLUDE "constants/audio.asm"
 .INCLUDE "constants/mmc3.asm"
-.INCLUDE "constants/nes.asm"
 .INCLUDE "macros/audio.asm"
 .INCLUDE "ram/ram.asm"
 .INCLUDE "audio/engine.asm"

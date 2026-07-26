@@ -1,6 +1,7 @@
 .SEGMENT "HOME"
 .INCLUDE "constants/button.asm"
 .INCBIN  "home/home_1_1.bin"
+.INCLUDE "home/render.asm"
 .INCLUDE "home/joy.asm"
 .INCLUDE "home/init_ppu.asm"
 .INCBIN  "home/home_1_2.bin"
