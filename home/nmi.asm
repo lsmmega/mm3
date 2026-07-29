@@ -1,177 +1,179 @@
 NMI:
-	.ORG $C000
-
-label_8
 	PHP
-label_9
 	PHA
-	TXA
-	PHA
-	TYA
-	PHA
+	PHX
+	PHY
 	LDA PPU_STATUS
-	LDA $FF
-	AND #$7F
+	LDA z:zppu_ctrl
+	AND #~nmi_enable
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_MASK
-	LDA $EE
-	ORA $9A
-	BNE label_1
-	LDA $FC
-	STA $79
-	LDA $FD
-	STA $7A
-	LDA $F8
-	STA $78
-	LDA $50
-	BNE label_2
-	LDA $5E
-	STA $7B
-label_2
+	LDA z:zscreen_pause_flag
+	ORA z:z9A
+	BNE @pause
+	LDA z:zscreen_xcoord_undo
+	STA z:zscreen_xcoord
+	LDA z:znametable_undo
+	STA z:znametable
+	LDA z:zirq_index_undo
+	STA z:zirq_index
+	LDA z:zirq_scanline_flag
+	BNE @enable
+	LDA z:zscanline_undo
+	STA z:zscanline
+
+@enable:
 	LDA #$00
 	STA PPU_OAM_ADDR
-	LDA #$02
+	LDA #oam_hi_addr
 	STA OAM_DMA
-	LDA $19
-	BEQ label_3
-	JSR $C4F8
-label_3
-	LDA $1A
-	BEQ label_4
-	LDA $FF
-	AND #$7F
-	ORA #$04
+	LDA z:zscreen_update_flag
+	BEQ @no_screen_update
+	JSR _screen_update_init
+
+@no_screen_update:
+	LDA z:zdraw_vertical_flag
+	BEQ @no_draw_vertical
+	LDA z:zppu_ctrl
+	AND #~nmi_enable
+	ORA #draw_vertical
 	STA PPU_CTRL
 	LDX #$00
-	STX $1A
-	JSR $C4FC
-	LDA $FF
-	AND #$7F
+	STX z:zdraw_vertical_flag
+	JSR _screen_update
+	LDA z:zppu_ctrl
+	AND #~nmi_enable
 	STA PPU_CTRL
-label_4
-	LDA $18
-	BEQ label_1
+
+@no_draw_vertical:
+	LDA z:zpalette_update_flag
+	BEQ @no_palette_update
 	LDX #$00
-	STX $18
+	STX z:zpalette_update_flag
 	LDA PPU_STATUS
 	LDA #$3F
 	STA PPU_ADDRESS
 	STX PPU_ADDRESS
 	LDY #$20
-label_5
-	LDA $0600,X
+
+@loop_1:
+	LDA acurrent_background_palette, X
 	STA PPU_DATA
 	INX
 	DEY
-	BNE label_5
+	BNE @loop_1
 	LDA #$3F
 	STA PPU_ADDRESS
 	STY PPU_ADDRESS
 	STY PPU_ADDRESS
 	STY PPU_ADDRESS
-label_1
-	LDA $78
+
+@pause:
+@no_palette_update:
+	LDA z:zirq_index
 	CMP #$02
-	BNE label_6
+	BNE @not_gemini
 	LDA PPU_STATUS
-	LDA $5F
+	LDA z:zirq_gemini_xcoord
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
-	BEQ label_7
-label_6
+	BEQ @done
+
+@not_gemini:
 	LDA PPU_STATUS
-	LDA $79
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
-	LDA $FA
+	LDA z:zscreen_ycoord
 	STA PPU_SCROLL
-label_7
-	LDA $FE
+
+@done:
+	LDA z:zppu_mask
 	STA PPU_MASK
-	LDA $7A
-	AND #$03
-	ORA $FF
+	LDA z:znametable
+	AND #all_nametable
+	ORA z:zppu_ctrl
 	STA PPU_CTRL
-	JSR $FF41
-	LDA $F0
-	STA $8000
-	LDA $7B
-	STA label_8
-	STA label_9
-	LDX $9B
-	STA $E000,X
-	BEQ label_10
-	LDX $78
-	LDA $50
-	BEQ label_11
-	LDA $7B
-	CMP $51
-	BCC label_11
+	JSR _chr_bankswitch_wait
+	LDA z:zbank_select
+	STA bank_select
+	LDA z:zscanline
+	STA irq_latch
+	STA irq_reload
+	LDX z:zirq_flag
+	STA irq_disable, X
+	BEQ @disable
+	LDX z:zirq_index
+	LDA z:zirq_scanline_flag
+	BEQ @disable_scanline
+	LDA z:zscanline
+	CMP z:zirq_scanline
+	BCC @disable_scanline
 	LDX #$01
-label_11
-	LDA $C4C8,X
-	STA $9C
-	LDA $C4DA,X
-	STA $9D
-label_10
-	INC $92
+
+@disable_scanline:
+	LDA irq_lo_pointers, X
+	STA z:zirq_pointer
+	LDA irq_hi_pointers, X
+	STA z:zirq_pointer + 1
+
+@disable:
+	INC z:znmi_frame
 	LDX #$FF
-	STX $90
+	STX z:zthread_handle_flag
 	INX
 	LDY #$04
-label_13
-	LDA $80,X
+
+@loop_2:
+	LDA z:zthread_flag, X
 	CMP #$01
-	BNE label_12
-	DEC $81,X
-	BNE label_12
+	BNE @nz
+	DEC z:zthread_timer, X
+	BNE @nz
 	LDA #$04
-	STA $80,X
-label_12
+	STA z:zthread_flag, X
+
+@nz:
 	INX
 	INX
 	INX
 	INX
 	DEY
-	BNE label_13
+	BNE @loop_2
 	TSX
-	LDA $0107,X
-	STA $7D
-	LDA $0106,X
-	STA $7C
-	LDA #$C1
-	STA $0107,X
-	LDA #$21
-	STA $0106,X
-	PLA
-	TAY
-	PLA
-	TAX
+	LDA astack - $F8, X
+	STA z:zreturn_pointer + 1
+	LDA astack - $F9, X
+	STA z:zreturn_pointer
+	LDA #>_nmi_handle_audio
+	STA astack - $F8, X
+	LDA #<_nmi_handle_audio
+	STA astack - $F9, X
+	PLY
+	PLX
 	PLA
 	PLP
 	RTI
+
+_nmi_handle_audio:
 	PHP
 	PHP
 	PHP
 	PHA
-	TXA
-	PHA
-	TYA
-	PHA
+	PHX
+	PHY
 	TSX
 	SEC
-	LDA $7C
+	LDA z:zreturn_pointer
 	SBC #$01
-	STA $0105,X
-	LDA $7D
+	STA astack - $FA, X
+	LDA z:zreturn_pointer + 1
 	SBC #$00
-	STA $0106,X
-	JSR $FF90
-	PLA
-	TAY
-	PLA
-	TAX
+	STA astack - $F9, X
+	JSR _audio_bankswitch
+	PLY
+	PLX
 	PLA
 	PLP
 	RTS

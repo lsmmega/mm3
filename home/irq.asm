@@ -1,403 +1,444 @@
 IRQ:
-	.ORG $C143
-
 	PHP
 	PHA
 	TXA
 	PHA
 	TYA
 	PHA
-	STA $E000
-	STA $E001
-	JMP ($009C)
-label_22
-	LDA $78
+	STA irq_disable
+	STA irq_enable
+	JMP (zirq_pointer)
+
+_irq_weapons_menu:
+	LDA z:zirq_index
 	CMP #$0B
-	BEQ label_1
+	BEQ @is_gamma
 	LDA PPU_STATUS
-	LDA $52
+	LDA z:zirq_nametable_address
 	STA PPU_ADDRESS
 	LDA #$C0
 	STA PPU_ADDRESS
-	LDA $52
+	LDA z:zirq_nametable_address
 	LSR
 	LSR
-	AND #$03
-	ORA #$98
+	AND #all_nametable
+	ORA #nmi_enable | background_table_right | sprites_table_right
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
-	JMP label_2
-label_1
+	JMP _irq_next
+
+@is_gamma:
 	LDA PPU_STATUS
 	LDA #$20
 	STA PPU_ADDRESS
 	LDA #$00
 	STA PPU_ADDRESS
-	LDA #$98
+	LDA #nmi_enable | background_table_right | sprites_table_right
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
-	JMP label_2
+	JMP _irq_next
+
+_irq_gemini:
 	LDA PPU_STATUS
-	LDA $79
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
-	LDA $50
-	BEQ label_3
-	LDA $51
+	LDA z:zirq_scanline_flag
+	BEQ _irq_scanline_disable_common
+	LDA z:zirq_scanline
 	SEC
 	SBC #$9F
-	STA $C000
-	LDA label_4
-	STA $9C
-	LDA $C4DB
-	STA $9D
-	JMP label_2
-label_3
-	JMP label_5
+	STA irq_latch
+	LDA irq_weapons_menu_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_weapons_menu_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_scanline_disable_common:
+	JMP _irq_done
+
+_irq_giant_metall_1:
 	LDA PPU_STATUS
 	LDA #$28
 	STA PPU_ADDRESS
 	LDA #$00
 	STA PPU_ADDRESS
-	LDA $FF
-	ORA #$02
+	LDA z:zppu_ctrl
+	ORA #nametable_bottom_left
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
 	LDA #$B0
 	SEC
-	SBC $7B
-	STA $C000
-	LDX $78
-	LDA $50
-	BEQ label_6
-	LDA $51
+	SBC z:zscanline
+	STA irq_latch
+	LDX z:zirq_index
+	LDA z:zirq_scanline_flag
+	BEQ @no
+	LDA z:zirq_scanline
 	CMP #$B0
-	BNE label_6
+	BNE @no
 	LDX #$00
-label_6
-	LDA label_4,X
-	STA $9C
-	LDA $C4DB,X
-	STA $9D
-	JMP label_2
+
+@no:
+	LDA irq_lo_pointers + 1, X
+	STA z:zirq_pointer
+	LDA irq_hi_pointers + 1, X
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_giant_metall_2:
 	LDA PPU_STATUS
 	LDA #$22
 	STA PPU_ADDRESS
 	LDA #$C0
 	STA PPU_ADDRESS
-	LDA $FF
+	LDA z:zppu_ctrl
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
 	LDA #$B0
 	STA PPU_SCROLL
-	LDA $50
-	BEQ label_3
-	LDA $51
+	LDA z:zirq_scanline_flag
+	BEQ _irq_scanline_disable_common
+	LDA z:zirq_scanline
 	SEC
 	SBC #$B0
-	STA $C000
-	LDA label_4
-	STA $9C
-	LDA $C4DB
-	STA $9D
-	JMP label_2
+	STA irq_latch
+	LDA irq_weapons_menu_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_weapons_menu_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_5:
 	LDA PPU_STATUS
 	LDA #$20
 	STA PPU_ADDRESS
-	LDA $79
+	LDA z:zscreen_xcoord
 	LSR
 	LSR
 	LSR
-	AND #$1F
+	AND #%00011111
 	ORA #$00
 	STA PPU_ADDRESS
-	LDA $FF
-	AND #$FC
+	LDA z:zppu_ctrl
+	AND #~all_nametable
 	STA PPU_CTRL
-	LDA $79
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
 	LDA #$C0
 	SEC
-	SBC $7B
-	STA $C000
-	LDA $C4CE
-	STA $9C
-	LDA label_7
-	STA $9D
-	JMP label_2
+	SBC z:zscanline
+	STA irq_latch
+	LDA irq_6_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_6_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_6:
 	LDA PPU_STATUS
 	LDA #$23
 	STA PPU_ADDRESS
-	LDA $79
+	LDA z:zscreen_xcoord
 	LSR
 	LSR
 	LSR
-	AND #$1F
+	AND #%00011111
 	ORA #$00
 	STA PPU_ADDRESS
-	LDA $FF
-	AND #$FC
+	LDA z:zppu_ctrl
+	AND #~all_nametable
 	STA PPU_CTRL
-	LDA $79
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
 	LDA #$C0
 	STA PPU_SCROLL
-	JMP label_5
+	JMP _irq_done
+
+_irq_3_splits_1:
 	LDA PPU_STATUS
-	LDA $79
-	EOR #$FF
+	LDA z:zscreen_xcoord
+	EOR #%11111111
 	CLC
 	ADC #$01
-	STA $9C
-	LDA $7A
-	EOR #$FF
+	STA z:zirq_pointer
+	LDA z:znametable
+	EOR #%11111111
 	ADC #$00
-	AND #$01
-	STA $9D
-	LDA $FF
-	AND #$FC
-	ORA $9D
+	AND #%00000001
+	STA z:zirq_pointer + 1
+	LDA z:zppu_ctrl
+	AND #~all_nametable
+	ORA z:zirq_pointer + 1
 	STA PPU_CTRL
-	LDA $9C
+	LDA z:zirq_pointer
 	STA PPU_SCROLL
 	LDA #$58
 	STA PPU_SCROLL
 	LDA #$40
-	STA $C000
-	LDA label_8
-	STA $9C
-	LDA label_9
-	STA $9D
-	JMP label_2
+	STA irq_latch
+	LDA irq_3_splits_2_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_3_splits_2_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_3_splits_2:
 	LDA PPU_STATUS
-	LDA $7A
-	AND #$01
+	LDA z:znametable
+	AND #nametable_top_right
 	ASL
 	ASL
 	ORA #$22
 	STA PPU_ADDRESS
-	LDA $79
+	LDA z:zscreen_xcoord
 	LSR
 	LSR
 	LSR
-	AND #$1F
-	ORA #$60
+	AND #%00011111
+	ORA #%01100000
 	STA PPU_ADDRESS
-	LDA $7A
-	AND #$03
-	ORA $FF
+	LDA z:znametable
+	AND #all_nametable
+	ORA z:zppu_ctrl
 	STA PPU_CTRL
-	LDA $79
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
 	LDA #$98
 	STA PPU_SCROLL
-	JMP label_5
+	JMP _irq_done
+
+_irq_wily3_1:
 	LDA PPU_STATUS
-	LDY $73
-	LDA $69
-	EOR label_10,Y
+	LDY z:zirq_wily3_moving_index
+	LDA z:zirq_xcoord_1
+	EOR irq_wily3_direction, Y
 	CLC
-	ADC label_11,Y
+	ADC irq_wily3_offset, Y
 	STA PPU_SCROLL
-	LDA $C4F2,Y
+	LDA irq_wily3_upper_ycoord, Y
 	STA PPU_SCROLL
 	LDA #$0E
-	STA $C000
-	LDA label_12
-	STA $9C
-	LDA label_13
-	STA $9D
-	JMP label_2
+	STA irq_latch
+	LDA irq_wily3_2_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_wily3_2_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_wily3_2:
 	LDA PPU_STATUS
-	LDY $73
+	LDY z:zirq_wily3_moving_index
 	LDA #$00
 	STA PPU_SCROLL
-	LDA $C4F5,Y
+	LDA irq_wily3_lower_ycoord, Y
 	STA PPU_SCROLL
-	INC $73
-	LDA $73
+	INC z:zirq_wily3_moving_index
+	LDA z:zirq_wily3_moving_index
 	CMP #$03
-	BEQ label_14
+	BEQ @done
 	LDA #$20
-	STA $C000
-	LDA label_15
-	STA $9C
-	LDA label_16
-	STA $9D
-	JMP label_2
-label_14
+	STA irq_latch
+	LDA irq_wily3_1_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_wily3_1_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+@done:
 	LDA #$00
-	STA $73
-	LDA $50
-	BEQ label_17
-	LDA $51
+	STA z:zirq_wily3_moving_index
+	LDA z:zirq_scanline_flag
+	BEQ @disable
+	LDA z:zirq_scanline
 	SEC
 	SBC #$A0
-	STA $C000
-	LDA label_4
-	STA $9C
-	LDA $C4DB
-	STA $9D
-	JMP label_2
-label_17
-	JMP label_5
+	STA irq_latch
+	LDA irq_weapons_menu_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_weapons_menu_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+@disable:
+	JMP _irq_done
+
+_irq_gamma_1:
 	LDA PPU_STATUS
 	LDA #$21
 	STA PPU_ADDRESS
 	LDA #$40
 	STA PPU_ADDRESS
-	LDA $FF
-	AND #$FC
+	LDA z:zppu_ctrl
+	AND #~all_nametable
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
 	LDA #$4C
-	STA $C000
-	LDA $C4D4
-	STA $9C
-	LDA label_18
-	STA $9D
-	JMP label_2
+	STA irq_latch
+	LDA irq_gamma_2_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_gamma_2_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_gamma_2:
 	LDA PPU_STATUS
-	LDA $6A
+	LDA z:zirq_xcoord_2
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
-	LDA $50
-	BEQ label_19
-	LDA $51
+	LDA z:zirq_scanline_flag
+	BEQ @disable
+	LDA z:zirq_scanline
 	SEC
 	SBC #$A0
-	STA $C000
-	LDA label_4
-	STA $9C
-	LDA $C4DB
-	STA $9D
-	JMP label_2
-label_19
-	JMP label_5
+	STA irq_latch
+	LDA irq_weapons_menu_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_weapons_menu_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+@disable:
+	JMP _irq_done
+
+_irq_wily_machine_3_1:
 	LDA PPU_STATUS
-	LDA $6B
+	LDA z:zirq_nametable
 	ASL
 	ASL
 	ORA #$20
 	STA PPU_ADDRESS
-	LDA $6A
+	LDA z:zirq_xcoord_2
 	LSR
 	LSR
 	LSR
 	ORA #$E0
 	STA PPU_ADDRESS
-	LDA $6A
+	LDA z:zirq_xcoord_2
 	STA PPU_SCROLL
-	LDA $7B
+	LDA z:zscanline
 	STA PPU_SCROLL
-	LDA $FF
-	ORA $6B
+	LDA z:zppu_ctrl
+	ORA z:zirq_nametable
 	STA PPU_CTRL
 	LDA #$AE
 	SEC
-	SBC $7B
-	STA $C000
-	LDA $C4D6
-	STA $9C
-	LDA label_20
-	STA $9D
-	JMP label_2
-	LDA $50
-	BEQ label_21
-	LDA $51
+	SBC z:zscanline
+	STA irq_latch
+	LDA irq_wily_machine_3_2_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_wily_machine_3_2_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_wily_machine_3_2:
+	LDA z:zirq_scanline_flag
+	BEQ @no
+	LDA z:zirq_scanline
 	SEC
 	SBC #$B0
 	TAX
-	BNE label_21
-	JMP label_22
-label_21
+	BNE @no
+	JMP _irq_weapons_menu
+
+@no:
 	LDA PPU_STATUS
 	LDA #$22
 	STA PPU_ADDRESS
 	LDA #$C0
 	STA PPU_ADDRESS
-	LDA $FF
-	AND #$FC
+	LDA z:zppu_ctrl
+	AND #~all_nametable
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
-	LDA $50
-	BEQ label_23
-	STX $C000
-	LDA label_4
-	STA $9C
-	LDA $C4DB
-	STA $9D
-	JMP label_2
-label_23
-	JMP label_5
+	LDA z:zirq_scanline_flag
+	BEQ @disable
+	STX irq_latch
+	LDA irq_weapons_menu_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_weapons_menu_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+@disable:
+	JMP _irq_done
+
+_irq_ending_1:
 	LDA PPU_STATUS
-	LDA $69
+	LDA z:zirq_xcoord_1
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
 	LDA #$30
-	STA $C000
-	LDA label_24
-	STA $9C
-	LDA label_25
-	STA $9D
-	JMP label_2
+	STA irq_latch
+	LDA irq_ending_2_lo_pointer
+	STA z:zirq_pointer
+	LDA irq_ending_2_hi_pointer
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_ending_2:
 	LDA PPU_STATUS
-	LDA $6A
+	LDA z:zirq_xcoord_2
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
-	LDA $FF
-	AND #$FC
-	ORA $6B
+	LDA z:zppu_ctrl
+	AND #~all_nametable
+	ORA z:zirq_nametable
 	STA PPU_CTRL
 	LDA #$66
-	STA $E8
+	STA z:zchr_bank_data
 	LDA #$72
-	STA $E9
-	JSR $FF45
-	LDA $F0
-	STA $8000
+	STA z:zchr_bank_data + 1
+	JSR _chr_bankswitch
+	LDA z:zbank_select
+	STA bank_select
 	LDA #$78
-	STA $E8
+	STA z:zchr_bank_data
 	LDA #$7A
-	STA $E9
-	INC $1B
-	JMP label_5
-	LDA $E8
+	STA z:zchr_bank_data + 1
+	INC z:zchr_bank_select_index
+	JMP _irq_done
+
+_irq_dialog:
+	LDA z:zchr_bank_data
 	PHA
-	LDA $E9
+	LDA z:zchr_bank_data + 1
 	PHA
 	LDA #$66
-	STA $E8
+	STA z:zchr_bank_data
 	LDA #$72
-	STA $E9
-	JSR $FF45
-	LDA $F0
-	STA $8000
+	STA z:zchr_bank_data + 1
+	JSR _chr_bankswitch
+	LDA z:zbank_select
+	STA bank_select
 	PLA
-	STA $E9
+	STA z:zchr_bank_data + 1
 	PLA
-	STA $E8
-	INC $1B
-label_5
-	STA $E000
-label_2
+	STA z:zchr_bank_data
+	INC z:zchr_bank_select_index
+
+_irq_done:
+	STA irq_disable
+
+_irq_next:
 	PLA
 	TAY
 	PLA
@@ -405,55 +446,94 @@ label_2
 	PLA
 	PLP
 	RTI
-	BRK
-	BRK
-	BRK
-	BRK
-	TSX
-label_4
-	.HEX 52
-	TYA
-	CMP ($00,X)
-	AND $6F,X
-	.HEX 97
-label_8
-	.HEX D2
-label_15
-	.HEX 02
-label_12
-	.HEX 2B
-	ADC $A3,X
-	CPY $4A08
-label_24
-	ADC #$9C
-	CPY $C1
-	CMP ($C1,X)
-	.HEX C2
-	.HEX C2
-label_7
-	.HEX C2
-	.HEX C2
-label_9
-	.HEX C2
-label_16
-	.HEX C3
-label_13
-	.HEX C3
-	.HEX C3
-label_18
-	.HEX C3
-	.HEX C3
-label_20
-	CPY $C4
-label_25
-	CPY $C4
-label_10
-	.HEX FF
-	BRK
-	.HEX FF
-label_11
-	ORA ($00,X)
-	ORA ($30,X)
-	RTS
-	BCC $C536
-	BVS $C498
+
+;unknown
+	.BYTE $00, $00, $00, $00
+
+irq_lo_pointers:
+	.LOBYTES _irq_done
+
+irq_weapons_menu_lo_pointer:
+	.LOBYTES _irq_weapons_menu
+	.LOBYTES _irq_gemini
+	.LOBYTES _irq_giant_metall_1
+
+irq_giant_metall_2_lo_pointer:
+	.LOBYTES _irq_giant_metall_2
+	.LOBYTES _irq_5
+
+irq_6_lo_pointer:
+	.LOBYTES _irq_6
+	.LOBYTES _irq_3_splits_1
+
+irq_3_splits_2_lo_pointer:
+	.LOBYTES _irq_3_splits_2
+
+irq_wily3_1_lo_pointer:
+	.LOBYTES _irq_wily3_1
+
+irq_wily3_2_lo_pointer:
+	.LOBYTES _irq_wily3_2
+	.LOBYTES _irq_gamma_1
+
+irq_gamma_2_lo_pointer:
+	.LOBYTES _irq_gamma_2
+	.LOBYTES _irq_wily_machine_3_1
+
+irq_wily_machine_3_2_lo_pointer:
+	.LOBYTES _irq_wily_machine_3_2
+	.LOBYTES _irq_ending_1
+
+irq_ending_2_lo_pointer:
+	.LOBYTES _irq_ending_2
+	.LOBYTES _irq_dialog
+
+irq_hi_pointers:
+	.HIBYTES _irq_done
+
+irq_weapons_menu_hi_pointer:
+	.HIBYTES _irq_weapons_menu
+	.HIBYTES _irq_gemini
+	.HIBYTES _irq_giant_metall_1
+
+irq_giant_metall_2_hi_pointer:
+	.HIBYTES _irq_giant_metall_2
+	.HIBYTES _irq_5
+
+irq_6_hi_pointer:
+	.HIBYTES _irq_6
+	.HIBYTES _irq_3_splits_1
+
+irq_3_splits_2_hi_pointer:
+	.HIBYTES _irq_3_splits_2
+
+irq_wily3_1_hi_pointer:
+	.HIBYTES _irq_wily3_1
+
+irq_wily3_2_hi_pointer:
+	.HIBYTES _irq_wily3_2
+	.HIBYTES _irq_gamma_1
+
+irq_gamma_2_hi_pointer:
+	.HIBYTES _irq_gamma_2
+	.HIBYTES _irq_wily_machine_3_1
+
+irq_wily_machine_3_2_hi_pointer:
+	.HIBYTES _irq_wily_machine_3_2
+	.HIBYTES _irq_ending_1
+
+irq_ending_2_hi_pointer:
+	.HIBYTES _irq_ending_2
+	.HIBYTES _irq_dialog
+
+irq_wily3_direction:
+	.BYTE -1, +0, -1
+
+irq_wily3_offset:
+	.BYTE +1, +0, +1
+
+irq_wily3_upper_ycoord:
+	.BYTE $30, $60, $90
+
+irq_wily3_lower_ycoord:
+	.BYTE $40, $70, $A0

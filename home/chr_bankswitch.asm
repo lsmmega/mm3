@@ -3,9 +3,11 @@ _chr_bankswitch_update:
 	STA z:zchr_bank_select_index
 	RTS
 
-_chr_bankswitch:
+_chr_bankswitch_wait:
 	LDA z:zchr_bank_select_index
-	BEQ @skip
+	BEQ _no_chr_bankswitch_wait
+
+_chr_bankswitch:
 	LDX #$00
 	STX z:zchr_bank_select_index
 
@@ -17,5 +19,5 @@ _chr_bankswitch:
 	CPX #$06
 	BNE @loop
 
-@skip:
+_no_chr_bankswitch_wait:
 	RTS
