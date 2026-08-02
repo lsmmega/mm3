@@ -22,7 +22,7 @@ _irq_weapons_menu:
 	LSR
 	LSR
 	AND #all_nametable
-	ORA #nmi_enable | background_table_right | sprites_table_right
+	ORA #nmi_enable | background_table_right | sprite_table_right
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
@@ -35,7 +35,7 @@ _irq_weapons_menu:
 	STA PPU_ADDRESS
 	LDA #$00
 	STA PPU_ADDRESS
-	LDA #nmi_enable | background_table_right | sprites_table_right
+	LDA #nmi_enable | background_table_right | sprite_table_right
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_SCROLL
