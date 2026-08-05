@@ -1,4 +1,4 @@
-IRQ:
+irq:
 	PHP
 	PHA
 	TXA

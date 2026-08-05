@@ -1,4 +1,4 @@
-NMI:
+nmi:
 	PHP
 	PHA
 	PHX
